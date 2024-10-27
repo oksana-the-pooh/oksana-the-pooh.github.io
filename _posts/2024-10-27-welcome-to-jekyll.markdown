@@ -7,6 +7,8 @@ use_math: true
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
+Let's test some inline math $x$, $y$, $x_1$, $y_1$.
+
 $$
 K(a,b) = \int \mathcal{D}x(t) \exp(2\pi i S[x]/\hbar)
 $$
