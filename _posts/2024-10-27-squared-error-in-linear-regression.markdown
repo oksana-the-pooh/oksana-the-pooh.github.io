@@ -7,11 +7,9 @@ use_math: true
 ---
 Why do we optimize squared error while train linear regression model?
 
-This is self-treatment post -- I try to overcome my own knowledge gap. That's why I am going to deal with this question in details. Without any "It is easy to see" what is common for popular books and courses. I very well know where this is going. The day will pass and night will  come while you try to see this "easy".
-
 Squared error comes by two ways.
 
-The first one is let's use it as common choice and look what it results in.
+The first one is "let's use it as common choice and look what it results in".
 
 Let $$x$$ is realization of explanatory variable $$X$$, $$y(x)$$ is prediction (realization of random variable $$Y$$), $$t$$ is target value. The expected value of loss function $$L$$.
 
