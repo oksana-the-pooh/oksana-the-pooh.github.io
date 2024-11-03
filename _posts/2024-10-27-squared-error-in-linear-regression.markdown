@@ -63,7 +63,7 @@ Firstly, if the noise is a sum of independent noises of different nature then by
 
 Secondary, it is known from Information Theory that gaussian noise is the worst additive noise because it minimizes channel capacity (maximizes entropy of continuous value). All proofs must hold under the most hard conditions, i.e. for the worst case. Gaussian noise is the case.
 
-Let channel is given by a distribution $$P(y\|x)$$, then channel capacity
+Let channel is given by a distribution $$P(y | x)$$, then channel capacity
 
 $$C=\max_{P(x): E(x^2)\leq R} I(X;Y),\;\;X\sim N(0,R)$$, where $$R$$ is energy or power constraint of the channel.
 
