@@ -102,9 +102,17 @@ $$\begin{align}
 &=\log 2\frac{2\pi \sigma_x \sigma_Z}{\sqrt{2\pi}\sqrt{\sigma_X^2+\sigma_Z^2}}+\frac{1}{2}\frac{Z^2\sigma_X^2}{\sigma_Z^2(\sigma_X^2+\sigma_Z^2)}\log e+\frac{1}{2}\frac{X^2\sigma_Z^2}{\sigma_X^2(\sigma_X^2+\sigma_Z^2)}\log e-\frac{XZ}{\sigma_X^2+\sigma_Z^2}\log e
 \end{align}$$
 
-$$
-h(X|X+Z)=\iint P(x)P(z)\log\frac{2\pi \sigma_X \sigma_Z}{\sqrt{2\pi}\sqrt{\sigma_X^2+\sigma_Z^2}}dxdz++\iint P(x)P(z)\frac{1}{2}z^2\frac{\sigma_X^2}{\sigma_Z^2(\sigma_X^2+\sigma_Z^2)}\log e\;dxdz+\iint P(x)P(z)\frac{1}{2}x^2\frac{\sigma_Z^2}{\sigma_X^2(\sigma_X^2+\sigma_Z^2)}\log e\;dxdz--\iint P(x)P(z)\frac{xz}{\sigma_X^2+\sigma_Z^2}\log e\;dxdz=\log\frac{2\pi \sigma_X \sigma_Z}{\sqrt{2\pi}\sqrt{\sigma_X^2+\sigma_Z^2}}++\frac{1}{2}\frac{\sigma_X^2}{\sigma_X^2+\sigma_Z^2}\log e+\frac{1}{2}\frac{\sigma_Z^2}{\sigma_X^2+\sigma_Z^2}\log e-\int P(x)\frac{xlog e}{\sigma_X^2+\sigma_Z^2}\underset{=0}{\left(\int P(z)z\;dz\right)}\;dx=\log\sqrt{\frac{2\pi \sigma_X^2 \sigma_Z^2}{\sigma_X^2+\sigma_Z^2}}+\frac{1}{2}\log e=\frac{1}{2}\log 2\pi e \frac{\sigma_X^2\sigma_Z^2}{\sigma_X^2+\sigma_Z^2}
-$$
+$$\begin{align}
+h(X|X+Z)&=\iint P(x)P(z)\log\frac{2\pi \sigma_X \sigma_Z}{\sqrt{2\pi}\sqrt{\sigma_X^2+\sigma_Z^2}}dxdz \\ \nonumber
+&+\iint P(x)P(z)\frac{1}{2}z^2\frac{\sigma_X^2}{\sigma_Z^2(\sigma_X^2+\sigma_Z^2)}\log e\;dxdz\\ \nonumber
+&+\iint P(x)P(z)\frac{1}{2}x^2\frac{\sigma_Z^2}{\sigma_X^2(\sigma_X^2+\sigma_Z^2)}\log e\;dxdz\\ \nonumber
+&-\iint P(x)P(z)\frac{xz}{\sigma_X^2+\sigma_Z^2}\log e\;dxdz\\ \nonumber
+&=\log\frac{2\pi \sigma_X \sigma_Z}{\sqrt{2\pi}\sqrt{\sigma_X^2+\sigma_Z^2}}\\ \nonumber
+&+\frac{1}{2}\frac{\sigma_X^2}{\sigma_X^2+\sigma_Z^2}\log e\\ \nonumber
+&+\frac{1}{2}\frac{\sigma_Z^2}{\sigma_X^2+\sigma_Z^2}\log e-\int P(x)\frac{xlog e}{\sigma_X^2+\sigma_Z^2}\underset{=0}{\left(\int P(z)z\;dz\right)}\;dx\\ \nonumber
+&=\log\sqrt{\frac{2\pi \sigma_X^2 \sigma_Z^2}{\sigma_X^2+\sigma_Z^2}}+\frac{1}{2}\log e\\ \nonumber
+&=\frac{1}{2}\log 2\pi e \frac{\sigma_X^2\sigma_Z^2}{\sigma_X^2+\sigma_Z^2}
+\end{align}$$
 
 $$
 \sigma_X^2\leq R \Rightarrow \frac{\sigma_X^2\sigma_Z^2}{\sigma_X^2+\sigma_Z^2}\leq \frac{R\sigma_Z^2}{R+\sigma_Z^2}
