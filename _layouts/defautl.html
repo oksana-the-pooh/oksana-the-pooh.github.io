@@ -1,9 +1,5 @@
----
-layout: base
----
-
-{% include header.html type="page" %}
-
-{% if page.use_math %}
-{% include mathjax_support.html %}
-{% endif %}
+  <head>
+    {% if page.use_math %}
+      {% include mathjax_support.html %}
+    {% endif %}
+  </head>
