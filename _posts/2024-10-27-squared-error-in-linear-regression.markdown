@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Squared Error in Linear Regression"
 date:   2024-10-27 18:19:18 +0300
 categories: jekyll update
 use_math: true
@@ -16,7 +16,7 @@ Squared error comes by two ways.
 Let $$x$$ is realization of explanatory variable $$X$$, $$y(x)$$ is prediction (realization of random variable $$Y$$), $$t$$ is target value. The expected value of loss function $$L$$.
 
 $$
-E(L)=\iint L(t,y(x))P(x,t)\;dxdt&
+E(L)=\iint L(t,y(x))P(x,t)\;dxdt
 $$
 
 Let $$L(t,y(x))=(t-y(x))^2$$, then
