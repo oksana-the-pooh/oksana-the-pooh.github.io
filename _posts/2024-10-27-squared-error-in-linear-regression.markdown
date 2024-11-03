@@ -2,7 +2,7 @@
 layout: post
 title:  "Squared Error in Linear Regression"
 date:   2024-10-27 18:19:18 +0300
-categories: machine learning
+categories: machine_learning
 use_math: true
 ---
 Why do we optimize squared error while train linear regression model?
