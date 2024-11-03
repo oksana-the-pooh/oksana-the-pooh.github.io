@@ -28,7 +28,7 @@ url: "http://oksana-the-pooh.github.io/" # the base hostname & protocol for your
 github_username:  oksana-the-pooh
 
 # Build settings
-theme: minima
+theme: Reverie
 plugins:
   - jekyll-feed
 markdown: kramdown
