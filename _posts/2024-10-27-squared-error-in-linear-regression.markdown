@@ -95,12 +95,12 @@ $$
 P(X|X+Z)=\frac{P(X)P(Z)}{P(X+Z)}
 $$
 
-$$\begin{align}
+$$\begin{align*}
 \log\frac{1}{P(X|X+Z)}&=\log\frac{P(X+Z)}{P(X)P(Z)}=\log\frac{\frac{1}{\sqrt{2\pi}\sqrt{\sigma_X^2+\sigma_Y^2}}e^{-\frac{(X+Z)^2}{2(\sigma_X^2+\sigma_Y^2)}}}{\frac{1}{\sqrt{2\pi}\sigma_X}e^{-\frac{X^2}{2\sigma_X^2}}\frac{1}{\sqrt{2\pi}\sigma_Z}e^{-\frac{Z^2}{2\sigma_Z^2}}}\\ \nonumber
 &=\log\frac{2\pi \sigma_X \sigma_Z}{\sqrt{2\pi}\sqrt{\sigma_X^2+\sigma_Z^2}}e^{-\frac{(X+Z)^2}{2(\sigma_X^2+\sigma_Z^2)}+\frac{X^2}{2\sigma_X^2}+\frac{Z^2}{2\sigma_Z^2}}\\ \nonumber
 &=\log\frac{2\pi \sigma_X \sigma_Z}{\sqrt{2\pi}\sqrt{\sigma_X^2+\sigma_Z^2}}+\frac{1}{2}\left(\frac{Z^2}{\sigma_Z^2}+\frac{X^2}{\sigma_X^2}-\frac{(X+Z)^2}{\sigma_X^2+\sigma_Z^2}\right)\log e\\ \nonumber
 &=\log 2\frac{2\pi \sigma_x \sigma_Z}{\sqrt{2\pi}\sqrt{\sigma_X^2+\sigma_Z^2}}+\frac{1}{2}\frac{Z^2\sigma_X^2}{\sigma_Z^2(\sigma_X^2+\sigma_Z^2)}\log e+\frac{1}{2}\frac{X^2\sigma_Z^2}{\sigma_X^2(\sigma_X^2+\sigma_Z^2)}\log e-\frac{XZ}{\sigma_X^2+\sigma_Z^2}\log e
-\end{align}$$
+\end{align*}$$
 
 $$\begin{align*}
 h(X|X+Z)&=\iint P(x)P(z)\log\frac{2\pi \sigma_X \sigma_Z}{\sqrt{2\pi}\sqrt{\sigma_X^2+\sigma_Z^2}}dxdz \\ \nonumber
@@ -143,9 +143,11 @@ Let $$t=\begin{pmatrix}t_1 \\ \vdots \\ t_n \\ \end{pmatrix}$$,  $$X=\begin{pma
 
 $$P(t|X,w,\sigma)=\sqcap_{i=1}^{n}N(t_i|w^{\top}\phi(x_i),\sigma)$$
 
-$$
-\log P(t|X,w,\sigma)=\sum_{i=1}^{n}\log N(t_i|w^{\top}\phi(x_i),\sigma)=\sum_{i=1}^{n}\log \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(t_i-w^{\top}\phi(x_i))^2}{2\sigma^2}}= \\ =n\log \frac{1}{\sqrt{2\pi}\sigma} - \frac{1}{2\sigma^2}\sum_{i=1}^n(t_i-w^{\top}\phi(x_i))^2
-$$.
+$$\begin{align*}
+\log P(t|X,w,\sigma)&=\sum_{i=1}^{n}\log N(t_i|w^{\top}\phi(x_i),\sigma)\\
+&=\sum_{i=1}^{n}\log \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(t_i-w^{\top}\phi(x_i))^2}{2\sigma^2}}\\
+&=n\log \frac{1}{\sqrt{2\pi}\sigma} - \frac{1}{2\sigma^2}\sum_{i=1}^n(t_i-w^{\top}\phi(x_i))^2
+\end{align*}$$.
 
 The second term is squared error while $$P(t|X,w,\sigma)$$ is likelihood. So the minimizing of squared error is maximizing of likelihood.
 
