@@ -96,20 +96,20 @@ P(X|X+Z)=\frac{P(X)P(Z)}{P(X+Z)}
 $$
 
 $$\begin{align*}
-\log\frac{1}{P(X|X+Z)}&=\log\frac{P(X+Z)}{P(X)P(Z)}=\log\frac{\frac{1}{\sqrt{2\pi}\sqrt{\sigma_X^2+\sigma_Y^2}}e^{-\frac{(X+Z)^2}{2(\sigma_X^2+\sigma_Y^2)}}}{\frac{1}{\sqrt{2\pi}\sigma_X}e^{-\frac{X^2}{2\sigma_X^2}}\frac{1}{\sqrt{2\pi}\sigma_Z}e^{-\frac{Z^2}{2\sigma_Z^2}}}\\ \nonumber
-&=\log\frac{2\pi \sigma_X \sigma_Z}{\sqrt{2\pi}\sqrt{\sigma_X^2+\sigma_Z^2}}e^{-\frac{(X+Z)^2}{2(\sigma_X^2+\sigma_Z^2)}+\frac{X^2}{2\sigma_X^2}+\frac{Z^2}{2\sigma_Z^2}}\\ \nonumber
-&=\log\frac{2\pi \sigma_X \sigma_Z}{\sqrt{2\pi}\sqrt{\sigma_X^2+\sigma_Z^2}}+\frac{1}{2}\left(\frac{Z^2}{\sigma_Z^2}+\frac{X^2}{\sigma_X^2}-\frac{(X+Z)^2}{\sigma_X^2+\sigma_Z^2}\right)\log e\\ \nonumber
+\log\frac{1}{P(X|X+Z)}&=\log\frac{P(X+Z)}{P(X)P(Z)}=\log\frac{\frac{1}{\sqrt{2\pi}\sqrt{\sigma_X^2+\sigma_Y^2}}e^{-\frac{(X+Z)^2}{2(\sigma_X^2+\sigma_Y^2)}}}{\frac{1}{\sqrt{2\pi}\sigma_X}e^{-\frac{X^2}{2\sigma_X^2}}\frac{1}{\sqrt{2\pi}\sigma_Z}e^{-\frac{Z^2}{2\sigma_Z^2}}}\\ 
+&=\log\frac{2\pi \sigma_X \sigma_Z}{\sqrt{2\pi}\sqrt{\sigma_X^2+\sigma_Z^2}}e^{-\frac{(X+Z)^2}{2(\sigma_X^2+\sigma_Z^2)}+\frac{X^2}{2\sigma_X^2}+\frac{Z^2}{2\sigma_Z^2}}\\ 
+&=\log\frac{2\pi \sigma_X \sigma_Z}{\sqrt{2\pi}\sqrt{\sigma_X^2+\sigma_Z^2}}+\frac{1}{2}\left(\frac{Z^2}{\sigma_Z^2}+\frac{X^2}{\sigma_X^2}-\frac{(X+Z)^2}{\sigma_X^2+\sigma_Z^2}\right)\log e\\ 
 &=\log 2\frac{2\pi \sigma_x \sigma_Z}{\sqrt{2\pi}\sqrt{\sigma_X^2+\sigma_Z^2}}+\frac{1}{2}\frac{Z^2\sigma_X^2}{\sigma_Z^2(\sigma_X^2+\sigma_Z^2)}\log e+\frac{1}{2}\frac{X^2\sigma_Z^2}{\sigma_X^2(\sigma_X^2+\sigma_Z^2)}\log e-\frac{XZ}{\sigma_X^2+\sigma_Z^2}\log e
 \end{align*}$$
 
 $$\begin{align*}
-h(X|X+Z)&=\iint P(x)P(z)\log\frac{2\pi \sigma_X \sigma_Z}{\sqrt{2\pi}\sqrt{\sigma_X^2+\sigma_Z^2}}dxdz \\ \nonumber
-&+\iint P(x)P(z)\frac{1}{2}z^2\frac{\sigma_X^2}{\sigma_Z^2(\sigma_X^2+\sigma_Z^2)}\log e\;dxdz\\ \nonumber
-&+\iint P(x)P(z)\frac{1}{2}x^2\frac{\sigma_Z^2}{\sigma_X^2(\sigma_X^2+\sigma_Z^2)}\log e\;dxdz\\ \nonumber
-&-\iint P(x)P(z)\frac{xz}{\sigma_X^2+\sigma_Z^2}\log e\;dxdz\\ \nonumber
-&=\log\frac{2\pi \sigma_X \sigma_Z}{\sqrt{2\pi}\sqrt{\sigma_X^2+\sigma_Z^2}}+\frac{1}{2}\frac{\sigma_X^2}{\sigma_X^2+\sigma_Z^2}\log e\\ \nonumber
-&+\frac{1}{2}\frac{\sigma_Z^2}{\sigma_X^2+\sigma_Z^2}\log e-\int P(x)\frac{xlog e}{\sigma_X^2+\sigma_Z^2}\underset{=0}{\left(\int P(z)z\;dz\right)}\;dx\\ \nonumber
-&=\log\sqrt{\frac{2\pi \sigma_X^2 \sigma_Z^2}{\sigma_X^2+\sigma_Z^2}}+\frac{1}{2}\log e\\ \nonumber
+h(X|X+Z)&=\iint P(x)P(z)\log\frac{2\pi \sigma_X \sigma_Z}{\sqrt{2\pi}\sqrt{\sigma_X^2+\sigma_Z^2}}dxdz \\ 
+&+\iint P(x)P(z)\frac{1}{2}z^2\frac{\sigma_X^2}{\sigma_Z^2(\sigma_X^2+\sigma_Z^2)}\log e\;dxdz\\ 
+&+\iint P(x)P(z)\frac{1}{2}x^2\frac{\sigma_Z^2}{\sigma_X^2(\sigma_X^2+\sigma_Z^2)}\log e\;dxdz\\ 
+&-\iint P(x)P(z)\frac{xz}{\sigma_X^2+\sigma_Z^2}\log e\;dxdz\\ 
+&=\log\frac{2\pi \sigma_X \sigma_Z}{\sqrt{2\pi}\sqrt{\sigma_X^2+\sigma_Z^2}}+\frac{1}{2}\frac{\sigma_X^2}{\sigma_X^2+\sigma_Z^2}\log e\\ 
+&+\frac{1}{2}\frac{\sigma_Z^2}{\sigma_X^2+\sigma_Z^2}\log e-\int P(x)\frac{xlog e}{\sigma_X^2+\sigma_Z^2}\underset{=0}{\left(\int P(z)z\;dz\right)}\;dx\\ 
+&=\log\sqrt{\frac{2\pi \sigma_X^2 \sigma_Z^2}{\sigma_X^2+\sigma_Z^2}}+\frac{1}{2}\log e\\ 
 &=\frac{1}{2}\log 2\pi e \frac{\sigma_X^2\sigma_Z^2}{\sigma_X^2+\sigma_Z^2}
 \end{align*}$$
 
@@ -149,7 +149,7 @@ $$\begin{align*}
 &=n\log \frac{1}{\sqrt{2\pi}\sigma} - \frac{1}{2\sigma^2}\sum_{i=1}^n(t_i-w^{\top}\phi(x_i))^2
 \end{align*}$$.
 
-The second term is squared error while $$P(t|X,w,\sigma)$$ is likelihood. So the minimizing of squared error is maximizing of likelihood.
+The second term is squared error while $$P(t \vert X,w,\sigma)$$ is likelihood. So the minimizing of squared error is maximizing of likelihood.
 
 
 
