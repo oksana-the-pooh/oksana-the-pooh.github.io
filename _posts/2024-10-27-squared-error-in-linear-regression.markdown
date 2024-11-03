@@ -71,7 +71,7 @@ $$
 C\geq h(X)-h(X|Y)=\frac{1}{2}\log2\pi eR-\frac{1}{2}\log 2\pi e \frac{R\sigma^2}{Re\sigma^2}=\frac{1}{2}\log2\pi e \left(1+\frac{R}{\sigma^2}\right)=C_{gaussian}
 $$
 
-Why $$h(X|Y)\leq \frac{1}{2}\log2\pi e \frac{R\sigma^2}{Re\sigma^2}$$ ?
+Why $$h(X \vert Y)\leq \frac{1}{2}\log2\pi e \frac{R\sigma^2}{Re\sigma^2}$$ ?
 
 $$
 Y=X+Z,\;\;E(Z)=0,\; E(Z^2)=\sigma^2
@@ -85,7 +85,7 @@ $$
 P(X,X+Z)=P(X|X+Z)P(X+Z)=P(X+Z|X)P(X)
 $$
 
-$$P(X+Z|X)=P(Z|X)=P(Z)$$, since $$X$$ and $$Z$$ are independent.
+$$P(X+Z \vert X)=P(Z \vert X)=P(Z)$$, since $$X$$ and $$Z$$ are independent.
 
 $$
 P(X,X+Z)=P(X)P(Z)
