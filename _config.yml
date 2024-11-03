@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
+title: Teddy Bear Problem Solving Around Math
 email: oksana.trushina@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   This is my notes about math and everithing around math what I am interested in.
