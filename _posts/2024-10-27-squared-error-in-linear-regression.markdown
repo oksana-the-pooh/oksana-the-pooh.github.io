@@ -32,7 +32,11 @@ $$
 $$
 
 $$
-\int y(x)P(x|t)P(x)\;dt-\int tP(t|x)P(x)\;dt=0
+\int y(x)P(t|x)P(x)\;dt-\int tP(t|x)P(x)\;dt=0
+$$
+
+$$
+y(x)\int P(t|x)\;dt - \int tP(t|x)\;dt=0
 $$
 
 $$
