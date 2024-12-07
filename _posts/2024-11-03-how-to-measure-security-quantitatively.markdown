@@ -159,9 +159,9 @@ $$\int\limits_{i(W;M)\leq -\epsilon}\frac{i(W;M)}{n}P(WM)\;dwdm < 0$$
 
 and 
 
-$$\int\limits_{i(W;M) > \ln\vert M\vert}\frac{i(W;M)}{n}P(WM)\;dwdm = 0.$$
+$$\int\limits_{i(W;M) > \ln\vert M\vert}\frac{i(W;M)}{n}P(WM)\;dwdm = 0,$$
 
-
+since the authors (M. Bloch and J.N. Laneman) suppose $$M$$ to be distributed uniformly.
 
 
 
