@@ -173,7 +173,7 @@ $$\int\limits_{i(W;M) > \ln\vert M\vert}\frac{i(W;M)}{n}P(WM)\;dwdm = 0,$$
 since the authors (M. Bloch and J.N. Laneman) suppose $$M$$ to be distributed uniformly over set $$\mathcal{M}$$.
 
 So $$\forall \epsilon >0\;\;\;\; \lim\limits_{n\rightarrow \infty}\frac{I(W_n;M_n)}{n}
-\leq \lim\limits_{n\rightarrow \infty}(\frac{\epsilon}{n}+\frac{\ln \vert\mathcal{M}\vert}{n}P(i(W_n;M_n)>\epsilon))$$
+\leq \lim\limits_{n\rightarrow \infty}(\frac{\epsilon}{n}+\frac{\ln \vert\mathcal{M}\vert}{n}P(i(W_n;M_n)>\epsilon)) \Rightarrow \frac{I(W;m)}{n} \preceq i(W;M)$$
 
 
 
