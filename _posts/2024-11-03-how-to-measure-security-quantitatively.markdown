@@ -153,7 +153,7 @@ $$\begin{align*}
 &+\int\limits_{\epsilon < i(W;M) \leq \ln\vert \mathcal{M}\vert}\frac{i(W;M)}{n}P(WM)\;dwdm + \int\limits_{i(W;M) > \ln\vert \mathcal{M}\vert}\frac{i(W;M)}{n}P(WM)\;dwdm\\
 & \leq \frac{\epsilon}{n}\int\limits_{-\epsilon < i(W;M)\leq \epsilon}P(WM)\;dwdm + \frac{\ln\vert \mathcal{M}\vert}{n}\int\limits_{\epsilon <i(W;M) 
 \leq \ln\vert \mathcal{M}\vert}P(WM)\;dwdm\\
-& \leq \frac{\epsilon}{n} + frac{\ln\vert \mathcal{M}\vert}{n}P(i(W;M) > \epsilon)
+& \leq \frac{\epsilon}{n} + \frac{\ln\vert \mathcal{M}\vert}{n}P(i(W;M) > \epsilon)
 \end{align*},$$
 because 
 
