@@ -159,8 +159,8 @@ $$\begin{align*}
 &+\int\limits_{\epsilon < i(W;M) \leq \ln\vert \mathcal{M}\vert}\frac{1}{n}\ln\frac{1}{P(M)}P(WM)\;dwdm + \int\limits_{i(W;M) > \ln\vert \mathcal{M}\vert}\frac{i(W;M)}{n}P(WM)\;dwdm\\
 & \leq \frac{\epsilon}{n}\int\limits_{-\epsilon < i(W;M)\leq \epsilon}P(WM)\;dwdm + \frac{\ln\vert \mathcal{M}\vert}{n}\int\limits_{\epsilon <i(W;M) 
 \leq \ln\vert \mathcal{M}\vert}P(WM)\;dwdm\\
-& \leq \frac{\epsilon}{n} + \frac{\ln\vert \mathcal{M}\vert}{n}P(i(W;M) > \epsilon)
-\end{align*},$$
+& \leq \frac{\epsilon}{n} + \frac{\ln\vert \mathcal{M}\vert}{n}P(i(W;M) > \epsilon),
+\end{align*}$$
 
 because $$P(WM) \leq P(W)$$ and
 
@@ -172,7 +172,8 @@ $$\int\limits_{i(W;M) > \ln\vert M\vert}\frac{i(W;M)}{n}P(WM)\;dwdm = 0,$$
 
 since the authors (M. Bloch and J.N. Laneman) suppose $$M$$ to be distributed uniformly over set $$\mathcal{M}$$.
 
-
+So $$\forall \epsilon >0\;\;\;\; \lim\limits_{n\rightarrow \infty}\frac{I(W_n;M_n)}{n}
+\leq \lim\limits_{n\rightarrow \infty}(\frac{\epsilon}{n}+\frac{\ln \vert\mathcal{M}\vert}{n}P(i(W_n;M_n)>\epsilon))$$
 
 
 
