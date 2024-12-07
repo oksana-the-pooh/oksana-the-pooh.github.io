@@ -151,11 +151,17 @@ There is only one relation left $$\frac{I(W;M)}{n}\preceq i(W;M)$$.
 $$\begin{align*}
 \frac{I(W;M)}{n} = E(\frac{i(W;M)}{n}) &=\int\limits_{i(W;M)\leq -\epsilon}\frac{i(W;M)}{n}P(WM)\;dwdm +\int\limits_{-\epsilon < i(W;M)\leq \epsilon}\frac{i(W;M)}{n}P(WM)\;dwdm\\
 &+\int\limits_{\epsilon < i(W;M) \leq \ln\vert \mathcal{M}\vert}\frac{i(W;M)}{n}P(WM)\;dwdm + \int\limits_{i(W;M) > \ln\vert \mathcal{M}\vert}\frac{i(W;M)}{n}P(WM)\;dwdm\\
+&= \int\limits_{i(W;M)\leq -\epsilon}\frac{i(W;M)}{n}P(WM)\;dwdm +\int\limits_{-\epsilon < i(W;M)\leq \epsilon}\frac{i(W;M)}{n}P(WM)\;dwdm\\
+&+\int\limits_{\epsilon < i(W;M) \leq \ln\vert \mathcal{M}\vert}\frac{1}{n}\ln\frac{P(WM)}{P(W)P(M)}P(WM)\;dwdm + \int\limits_{i(W;M) > \ln\vert \mathcal{M}\vert}\frac{i(W;M)}{n}P(WM)\;dwdm\\
+&\leq \int\limits_{i(W;M)\leq -\epsilon}\frac{i(W;M)}{n}P(WM)\;dwdm +\int\limits_{-\epsilon < i(W;M)\leq \epsilon}\frac{i(W;M)}{n}P(WM)\;dwdm\\
+&+\int\limits_{\epsilon < i(W;M) \leq \ln\vert \mathcal{M}\vert}\frac{1}{n}\ln\frac{P(W)}{P(W)P(M)}P(WM)\;dwdm + \int\limits_{i(W;M) > \ln\vert \mathcal{M}\vert}\frac{i(W;M)}{n}P(WM)\;dwdm\\
+&=\leq \int\limits_{i(W;M)\leq -\epsilon}\frac{i(W;M)}{n}P(WM)\;dwdm +\int\limits_{-\epsilon < i(W;M)\leq \epsilon}\frac{i(W;M)}{n}P(WM)\;dwdm\\
+&+\int\limits_{\epsilon < i(W;M) \leq \ln\vert \mathcal{M}\vert}\frac{1}{n}\ln\frac{1}{P(M)}P(WM)\;dwdm + \int\limits_{i(W;M) > \ln\vert \mathcal{M}\vert}\frac{i(W;M)}{n}P(WM)\;dwdm\\
 & \leq \frac{\epsilon}{n}\int\limits_{-\epsilon < i(W;M)\leq \epsilon}P(WM)\;dwdm + \frac{\ln\vert \mathcal{M}\vert}{n}\int\limits_{\epsilon <i(W;M) 
 \leq \ln\vert \mathcal{M}\vert}P(WM)\;dwdm\\
 & \leq \frac{\epsilon}{n} + \frac{\ln\vert \mathcal{M}\vert}{n}P(i(W;M) > \epsilon)
 \end{align*},$$
-because 
+because $$P(WM) \leq P(W)$$ and
 
 $$\int\limits_{i(W;M)\leq -\epsilon}\frac{i(W;M)}{n}P(WM)\;dwdm < 0$$ 
 
