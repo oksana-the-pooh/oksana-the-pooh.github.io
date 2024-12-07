@@ -144,15 +144,21 @@ $$\lim\limits_{n\rightarrow \infty}\Delta(P(W_nM_n),P(W_n)P(M_n))=0 \Rightarrow 
 
 What means $$i(W;M)\preceq \Delta(P(WM),P(W)P(M))$$.
 
-Well, $$i(W;M)\preceq \Delta(P(WM),P(W)P(M)) \preceq I(W;M)$$ is done. There is only one relation left $$\frac{I(W;M)}{n}\preceq i(W;M)$$.
+Well, $$i(W;M)\preceq \Delta(P(WM),P(W)P(M)) \preceq I(W;M)$$ is done. 
 
-#(2): $$
-\begin{split}\frac{I(W;M)}{n}=E(\frac{i(W;M)}{n})=&\underbrace{E(\frac{i(W;M)}{n}\mathds{1}\{i(W;M)\leq -\epsilon\})}_{<0}\\
+There is only one relation left $$\frac{I(W;M)}{n}\preceq i(W;M)$$.
+
+$$
+\begin{align*}\frac{I(W;M)}{n}=E(\frac{i(W;M)}{n})&=\int\limits_{i(W;M)\leq -\epsilon}i(W;M)P(WM)\;dwdm+\int\limits_{-\epsilon < i(W;M)\leq \epsilon}i(W;M)P(WM)\;dwdm\\
++\int\limits_{\epsilon < i(W;M) \leq \ln\vert M\vert}i(W;M)P(WM)\;dwdm + \int\limits_{i(W;M) > \ln\vert M\vert}i(W;M)P(WM)\;dwdm
+\end{align*}$$
+
+#&\underbrace{E(\frac{i(W;M)}{n}\mathds{1}\{i(W;M)\leq -\epsilon\})}_{<0}\\
 #      +&\underbrace{E(\frac{i(W;M)}{n}\mathds{1}\{-\epsilon < i(W;M)\le \epsilon\})}_{\leq E(\frac{|i(W;M)|}{n}\mathds{1}\{|i(W;M)|\leq \epsilon\})\leq \frac{\epsilon}{n}}\\+
 #      &\underbrace{E(\frac{i(W;M)}{n}\mathds{1}\{\epsilon < i(W;M) \leq \log_2|M|\})}_{\leq \frac{\log_2|M|}{n}P(i(W;M)>\epsilon), \text{т.к. }i(W;M)\leq \log_2|M|}\\
 #      +&\underbrace{E(\frac{i(W;M)}{n}\mathds{1}\{i(W;M)>\log_2|M|\})}_{=0}\\ \leq
-#  &\frac{\epsilon}{n}+\frac{\log_2|M|}{n}P(i(W;M)>\epsilon)\end{split}
-#$$
+#  &\frac{\epsilon}{n}+\frac{\log_2|M|}{n}P(i(W;M)>\epsilon)\end{align*}
+$$
 #
 #What does security mean eventually
 #
