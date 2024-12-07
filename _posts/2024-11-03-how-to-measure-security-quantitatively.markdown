@@ -5,7 +5,9 @@ date:   2024-11-03 20:08:00 +0300
 categories: cryptography, information_theory, probability_theory
 use_math: true
 ---
-We use a lot of cryptographic tools not even noticing it. Almost every website exploring uses HTTPS to establish secure connection. In order to establish it a web browser and a website server must agree on what cipher to use for data encyption, what Message Authentication Code algorithm to use for a message integrity checking. Also a browser authenticates web site certificate using digital signature. When you pay by a credict card using PayPass/PayWare the card signs a transaction by it's digital signature. All this tools serve to guarantee a security. But what does security mean? May one cipher be more secure than another one? Can we measure security quantitatively? 
+Can we measure security quantitatively?
+
+We use a lot of cryptographic tools not even noticing it. Almost every website exploring uses HTTPS to establish secure connection. In order to establish it a web browser and a website server must agree on what cipher to use for data encyption, what Message Authentication Code algorithm to use for a message integrity checking. Also a browser authenticates web site certificate using digital signature. When you pay by a credict card using PayPass/PayWare the card signs a transaction by it's digital signature. All this tools serve to guarantee a security. But what does security mean? May one cipher be more secure than another one and can we see that quantitatively?
 
 How to approach the question
 
@@ -172,7 +174,9 @@ $$\int\limits_{i(W;M) > \ln\vert M\vert}\frac{i(W;M)}{n}P(WM)\;dwdm = 0,$$
 
 since the authors (M. Bloch and J.N. Laneman) suppose $$M$$ to be distributed uniformly over set $$\mathcal{M}$$.
 
-So $$\forall \epsilon >0\;\;\;\; \lim\limits_{n\rightarrow \infty}\frac{I(W_n;M_n)}{n}
+So 
+
+$$\forall \epsilon >0\;\;\;\; \lim\limits_{n\rightarrow \infty}\frac{I(W_n;M_n)}{n}
 \leq \lim\limits_{n\rightarrow \infty}(\frac{\epsilon}{n}+\frac{\ln \vert\mathcal{M}\vert}{n}P(i(W_n;M_n)>\epsilon)) \Rightarrow \frac{I(W;m)}{n} \preceq i(W;M)$$
 
 
