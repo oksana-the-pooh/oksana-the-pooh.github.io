@@ -161,12 +161,12 @@ and
 
 $$\int\limits_{i(W;M) > \ln\vert M\vert}\frac{i(W;M)}{n}P(WM)\;dwdm = 0$$.
 
-#&\underbrace{E(\frac{i(W;M)}{n}\mathds{1}\{i(W;M)\leq -\epsilon\})}_{<0}\\
-#      +&\underbrace{E(\frac{i(W;M)}{n}\mathds{1}\{-\epsilon < i(W;M)\le \epsilon\})}_{\leq E(\frac{|i(W;M)|}{n}\mathds{1}\{|i(W;M)|\leq \epsilon\})\leq \frac{\epsilon}{n}}\\+
-#      &\underbrace{E(\frac{i(W;M)}{n}\mathds{1}\{\epsilon < i(W;M) \leq \log_2|M|\})}_{\leq \frac{\log_2|M|}{n}P(i(W;M)>\epsilon), \text{т.к. }i(W;M)\leq \log_2|M|}\\
-#      +&\underbrace{E(\frac{i(W;M)}{n}\mathds{1}\{i(W;M)>\log_2|M|\})}_{=0}\\ \leq
-#  &\frac{\epsilon}{n}+\frac{\log_2|M|}{n}P(i(W;M)>\epsilon)\end{align*}
-$$
+
+
+
+
+
+
 #
 #What does security mean eventually
 #
