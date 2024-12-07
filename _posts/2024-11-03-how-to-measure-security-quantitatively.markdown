@@ -149,8 +149,10 @@ Well, $$i(W;M)\preceq \Delta(P(WM),P(W)P(M)) \preceq I(W;M)$$ is done.
 There is only one relation left $$\frac{I(W;M)}{n}\preceq i(W;M)$$.
 
 $$\begin{align*}
-\frac{I(W;M)}{n} = E(\frac{i(W;M)}{n}) &=\int\limits_{i(W;M)\leq -\epsilon}i(W;M)P(WM)\;dwdm +\int\limits_{-\epsilon < i(W;M)\leq \epsilon}i(W;M)P(WM)\;dwdm\\
-&+\int\limits_{\epsilon < i(W;M) \leq \ln\vert M\vert}i(W;M)P(WM)\;dwdm + \int\limits_{i(W;M) > \ln\vert M\vert}i(W;M)P(WM)\;dwdm
+\frac{I(W;M)}{n} = E(\frac{i(W;M)}{n}) &=\int\limits_{i(W;M)\leq -\epsilon}\frac{i(W;M)}{n}P(WM)\;dwdm +\int\limits_{-\epsilon < i(W;M)\leq \epsilon}\frac{i(W;M)}{n}P(WM)\;dwdm\\
+&+\int\limits_{\epsilon < i(W;M) \leq \ln\vert M\vert}\frac{i(W;M)}{n}P(WM)\;dwdm + \int\limits_{i(W;M) > \ln\vert M\vert}\frac{i(W;M)}{n}P(WM)\;dwdm\\
+& \leq \int\limits_{i(W;M)\leq -\epsilon}\frac{i(W;M)}{n}P(WM)\;dwdm + \frac{\epsilon}{n}\int\limits_{-\epsilon < i(W;M)\leq \epsilon}P(WM)\;dwdm 
++ \frac{\ln\vert M\vert}{n}\int\limits_{i(W;M) > \ln\vert M\vert}P(WM)\;dwdm 
 \end{align*}$$
 
 #&\underbrace{E(\frac{i(W;M)}{n}\mathds{1}\{i(W;M)\leq -\epsilon\})}_{<0}\\
