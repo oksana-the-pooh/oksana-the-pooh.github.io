@@ -151,9 +151,9 @@ There is only one relation left $$\frac{I(W;M)}{n}\preceq i(W;M)$$.
 $$\begin{align*}
 \frac{I(W;M)}{n} = E(\frac{i(W;M)}{n}) &=\int\limits_{i(W;M)\leq -\epsilon}\frac{i(W;M)}{n}P(WM)\;dwdm +\int\limits_{-\epsilon < i(W;M)\leq \epsilon}\frac{i(W;M)}{n}P(WM)\;dwdm\\
 &+\int\limits_{\epsilon < i(W;M) \leq \ln\vert M\vert}\frac{i(W;M)}{n}P(WM)\;dwdm + \int\limits_{i(W;M) > \ln\vert M\vert}\frac{i(W;M)}{n}P(WM)\;dwdm\\
-& \leq \int\limits_{i(W;M)\leq -\epsilon}\frac{i(W;M)}{n}P(WM)\;dwdm + \frac{\epsilon}{n}\int\limits_{-\epsilon < i(W;M)\leq \epsilon}P(WM)\;dwdm 
-+ \frac{\ln\vert M\vert}{n}\int\limits_{i(W;M) > \ln\vert M\vert}P(WM)\;dwdm 
-\end{align*}$$
+& \leq \frac{\epsilon}{n}\int\limits_{-\epsilon < i(W;M)\leq \epsilon}P(WM)\;dwdm + \frac{\ln\vert M\vert}{n}\int\limits_{\epsilon <i(W;M) \leq \ln\vert M\vert}P(WM)\;dwdm 
+\end{align*}$$,
+because $$\int\limits_{i(W;M)\leq -\epsilon}\frac{i(W;M)}{n}P(WM)\;dwdm < 0$$ and $$\int\limits_{i(W;M) > \ln\vert M\vert}\frac{i(W;M)}{n}P(WM)\;dwdm = 0$$.
 
 #&\underbrace{E(\frac{i(W;M)}{n}\mathds{1}\{i(W;M)\leq -\epsilon\})}_{<0}\\
 #      +&\underbrace{E(\frac{i(W;M)}{n}\mathds{1}\{-\epsilon < i(W;M)\le \epsilon\})}_{\leq E(\frac{|i(W;M)|}{n}\mathds{1}\{|i(W;M)|\leq \epsilon\})\leq \frac{\epsilon}{n}}\\+
