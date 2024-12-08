@@ -9,7 +9,7 @@ Can we measure security quantitatively?
 
 We use a lot of cryptographic tools not even noticing it. Almost every website exploring uses HTTPS to establish secure connection. In order to establish it a web browser and a website server must agree on what cipher to use for data encyption, what Message Authentication Code algorithm to use for a message integrity checking. Also a browser authenticates web site certificate using digital signature. When you pay by a credict card using PayPass/PayWare the card signs a transaction by it's digital signature. All this tools serve to guarantee a security. But what does security mean? May one cipher be more secure than another one and can we see that quantitatively?
 
-How to approach the question
+### How to approach the question
 
 For most of its history ctyptography was like a game where each side trying to outwit the other one. An encryption scheme or cipher was considered to be secure unless someone can successfully attack it. Then cryptographers developed some ad hoc defence and waited for a next attakers' move. Nowdays cryptography still doesn't look like the true science with clear and precise system of concepts, proofs and so on. Thanks to Claude Shannon there is a benchmark of a security. 
 
