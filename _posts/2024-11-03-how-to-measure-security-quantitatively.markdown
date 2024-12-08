@@ -15,7 +15,7 @@ For most of its history ctyptography was like a game where each side trying to o
 
 Let's consider every message $$m$$ to be sent securelly as a sample of some distribution $$P(M)$$. By intercepting a message $$m$$ an attaker got some message $$w$$, which in turn is a sample of some distribution $$P(W)$$. According to Shannon a link between $$P(MW)$$ and $$P(M)P(W)$$ is the point.
 
-How to measure
+***How to measure***
 
 So we can consider all possible distances between distributions. Namely,
 
