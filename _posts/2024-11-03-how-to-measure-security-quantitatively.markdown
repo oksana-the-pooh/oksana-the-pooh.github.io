@@ -210,78 +210,48 @@ $$\begin{align*}\text{Adv}(W)=\max_{f,M}\left(\max_{\mathcal{A}}P(\mathcal{A}(W)
 
 
 Семантическая секретность
-  \begin{tikzpicture}[scale=0.7]
-    \node{};
-    \node(2) at (2.5,0)[draw, rectangle]{\scriptsize{Шифратор}};
-    \node(3) at (10,0.3){};
-    \node(4) at (10,-0.3){};
-    \node(5) at (11,0){\scriptsize{Злоумышленник, $\mathcal{A}$}};
-    \draw[->](3)--(4,0.3)node[above,midway]{\scriptsize{$m_0,\;m_1\;\;\;|m_0|=|m_1|$}};
-    \draw[->](4,-0.3)--(4)node[below,midway]{\scriptsize{$c=F(m_b)=W$}};
-  \end{tikzpicture}
-#       \end{figure}
-#       \begingroup
-#       \footnotesize
-#       $b \in \{0,1\}\;\;\;B_b=\{\text{событие: реализована попытка }b\}$\\
-#       \begin{equation*}\begin{split}\hspace{-1cm}\forall \mathcal{A} \in \textbf{P}\;\; \text{Adv}(\mathcal{A})=\max_{M_1,M_0}|P(B_1)-P(B_0)|\rightarrow 0 \sim &\max_{\mathcal{A}\in \textbf{P},M_1,M_0}|P(B_1)-P(B_0)|\\
-#           =&\max_{\mathcal{A}\in \textbf{P}, M_0,M_1}2P(\mathcal{A}(M_0,M_1,W)=b)-1\rightarrow 0
-#       \end{split}\end{equation*}
-#         \endgroup
-#
-#  Но это distinguish security!
-#
-# \framesubtitle{Distinguish security $\leftrightarrow$ Семантическая секретность}
-#  \begin{them}
-#    $\text{Adv}_{\text{Семантическая}}\leq \text{Adv}_{\text{Distinguish}}\leq 2\text{Adv}_{\text{Семантическая}}$
-#  \end{them}
-#  \vspace{0.2cm}
-#  \begingroup
-#  \tiny
-#  $\square$ $M_0,M_1$ независимы и распределены как $M$
-#  \begin{equation*}
-#    \begin{split}
-#  &P\left(\mathcal{A}(M_0,M_1,W|b=1)=1\right)=P\left(\mathcal{A}(W)=f(M)\right),\\
-#      &P(\mathcal{A}(M_0,M_1,W|b=0)=1)\leq P(\text{Gen}(n)=f(M))
-#    \end{split}
-#  \end{equation*}
-#  \begin{equation*}
-#    \begin{split}
-#      P(\mathcal{A}(W)=f(M))-P(\text{Gen}(n)=f(M))&\leq P(\mathcal{A}(M_0,M_1,W|b=1)=1)-P(\mathcal{A}(M_0,M_1,W|b=0)=1)\\ &\leq \max_{M_0,M_1} 2P(\mathcal{A}(M_0,M_1,W)=b)-1
-#      \end{split}
-#  \end{equation*}
-#  $M_b\sim \text{Uniform}(\{M_0,M_1\})),\;\; b\sim \text{Uniform}(\{0,1\})\Rightarrow$ определить $b\;\sim$ определить $M_b$
-#  \begin{equation*}
-#    \begin{split}
-#      \frac{1}{2}\text{Adv}_{\text{Distinguish}}=&\max_{\mathcal{A},M_0,M_1}\left(P(\mathcal{A}(M_0,M_1,W)=b)-\frac{1}{2}\right)\\
-#      =&\max_{\mathcal{A},M_0,M_1}\left(P(\mathcal{A}(W)=M_b)-\max_{\text{Gen}}P(\text{Gen}(n)=M_b)\right)\leq \text{Adv}_{\text{Семантическая}}
-#      \end{split}
-#  \end{equation*}
-#
-#\framesubtitle{Distinguish security $\leftrightarrow$ Сильная секретность}
-#  \begingroup
-#  \tiny
-#  %\frametitle{}
-#  Сильная секретность: $\text{Adv}(W)_{\text{Сильная}}=I(W;M)$\\
-#  \vspace{0.3cm}
-#  $\text{Adv}(W)_{\text{Distinguish}}\leq \sqrt{2\text{Adv}(W)_{\text{Сильная}}}$ (нер-во Пинскера)
-#  \begin{them}
-#    \begin{equation*}
-#      \text{Adv}(W)_{\text{Сильная}}\leq 2 \text{Adv}(W)_{\text{Distinguish}}\log_2\frac{2^n}{\text{Adv}(W)_{\text{Distinguish}}}
-#      \end{equation*}
-#  \end{them}
-#  $\square$
-#  $f(x) = \min(2x\log\frac{2^n}{x},1)$. $I(M;W)=\sum_{m}P(M=m)(H(W)−H(W|M=m))$. $m=argmax(H(W)-H(W|M=m))$. Пусть $x=\Delta(P(W),P(W|M=m))$.\\
-#  \begin{equation*}\hspace{-1.7cm}\begin{split}I(M;W)&\leq H(W)−H(W|M=m)\\ &\leq f(x),\text{ т.к. }H(X)-H(Y)\leq 2\Delta(P(X),P(Y))\log_2\frac{N}{\Delta(P(X),P(Y))},N=|\text{supp}(P(X))\cup \text{supp}(P(Y))|\\
-#      & \leq f(\max_{m_0,m_1}\Delta(P(W|M=m_0),P(W|M=m_1)) \text{ т.к. }x\leq \max_{m_0,m_1}\Delta(P(W|M=m_0),P(W|M=m_1))\;\;\forall M 
-#      \end{split}
-#    \end{equation*}
-#  \begin{flushright}
-#    $\blacksquare$
-#    \end{flushright}
-#  \endgroup
-#\end{frame}
-#\begin{frame}
-#  \frametitle{Что такое ``секретно'' и что все это значит?}
-#  \framesubtitle{Связь между разными видами секретности}
-#  \begin{equation*}\text{Слабая} \preceq (\text{Сильная} \leftrightarrow \text{Distinguish} \leftrightarrow \text{Семантическая}) \preceq  \text{Совершенная}\end{equation*}
-#
+
+$$\begin{align*}\forall \mathcal{A} \in \textbf{P}\;\; \text{Adv}(\mathcal{A})=\max_{M_1,M_0}|P(B_1)-P(B_0)|\rightarrow 0 \sim &\max_{\mathcal{A}\in 
+\textbf{P},M_1,M_0}|P(B_1)-P(B_0)|\\
+           =&\max_{\mathcal{A}\in \textbf{P}, M_0,M_1}2P(\mathcal{A}(M_0,M_1,W)=b)-1\rightarrow 0
+\end{align*}
+
+  Но это distinguish security!
+
+Distinguish security $$\leftrightarrow$$ Семантическая секретность
+$$\text{Adv}_{\text{Семантическая}}\leq \text{Adv}_{\text{Distinguish}}\leq 2\text{Adv}_{\text{Семантическая}}$$
+
+$$\square M_0,M_1$$ независимы и распределены как $$M$$
+$$\begin{align*}
+  &P\left(\mathcal{A}(M_0,M_1,W|b=1)=1\right)=P\left(\mathcal{A}(W)=f(M)\right),\\
+      &P(\mathcal{A}(M_0,M_1,W|b=0)=1)\leq P(\text{Gen}(n)=f(M))
+\end{align*}$$
+$$\begin{align*}
+      P(\mathcal{A}(W)=f(M))-P(\text{Gen}(n)=f(M))&\leq P(\mathcal{A}(M_0,M_1,W|b=1)=1)-P(\mathcal{A}(M_0,M_1,W|b=0)=1)\\ &\leq \max_{M_0,M_1} 2P(\mathcal{A}(M_0,M_1,W)=b)-1
+  \end{align*}$$
+$$M_b\sim \text{Uniform}(\{M_0,M_1\})),\;\; b\sim \text{Uniform}(\{0,1\})\Rightarrow$$ определить $$b\;\sim$$ определить $$M_b$$
+$$\begin{align*}
+      \frac{1}{2}\text{Adv}_{\text{Distinguish}}=&\max_{\mathcal{A},M_0,M_1}\left(P(\mathcal{A}(M_0,M_1,W)=b)-\frac{1}{2}\right)\\
+      =&\max_{\mathcal{A},M_0,M_1}\left(P(\mathcal{A}(W)=M_b)-\max_{\text{Gen}}P(\text{Gen}(n)=M_b)\right)\leq \text{Adv}_{\text{Семантическая}}
+\end{align*}$$
+
+Distinguish security $$\leftrightarrow$$ Сильная секретность
+Сильная секретность: $$\text{Adv}(W)_{\text{Сильная}}=I(W;M)$$
+
+$$\text{Adv}(W)_{\text{Distinguish}}\leq \sqrt{2\text{Adv}(W)_{\text{Сильная}}}$$ (нер-во Пинскера)
+
+$$\begin{align*}
+      \text{Adv}(W)_{\text{Сильная}}\leq 2 \text{Adv}(W)_{\text{Distinguish}}\log_2\frac{2^n}{\text{Adv}(W)_{\text{Distinguish}}}
+      \end{align*}$$
+
+$$f(x) = \min(2x\log\frac{2^n}{x},1)$$. $$I(M;W)=\sum_{m}P(M=m)(H(W)−H(W|M=m))$$. $$m=argmax(H(W)-H(W|M=m))$$. Пусть $$x=\Delta(P(W),P(W|M=m))$$.
+
+$$\begin{align*}
+I(M;W)&\leq H(W)−H(W|M=m)\\ &\leq f(x),\text{ т.к. }H(X)-H(Y)\leq 2\Delta(P(X),P(Y))\log_2\frac{N}{\Delta(P(X),P(Y))},N=|\text{supp}(P(X))\cup \text{supp}(P(Y))|\\
+      & \leq f(\max_{m_0,m_1}\Delta(P(W|M=m_0),P(W|M=m_1)) \text{ т.к. }x\leq \max_{m_0,m_1}\Delta(P(W|M=m_0),P(W|M=m_1))\;\;\forall M 
+\end{align*}$$
+
+Что такое 'секретно' и что все это значит?
+
+$$\begin{align*}\text{Слабая} \preceq (\text{Сильная} \leftrightarrow \text{Distinguish} \leftrightarrow \text{Семантическая}) \preceq  \text{Совершенная}
+\end{align*}$$
