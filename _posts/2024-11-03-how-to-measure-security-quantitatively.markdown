@@ -214,7 +214,7 @@ $$\begin{align*}\text{Adv}(W)=\max_{f,M}\left(\max_{\mathcal{A}}P(\mathcal{A}(W)
 $$\begin{align*}\forall \mathcal{A} \in \textbf{P}\;\; \text{Adv}(\mathcal{A})=\max_{M_1,M_0}|P(B_1)-P(B_0)|\rightarrow 0 \sim &\max_{\mathcal{A}\in 
 \textbf{P},M_1,M_0}|P(B_1)-P(B_0)|\\
            =&\max_{\mathcal{A}\in \textbf{P}, M_0,M_1}2P(\mathcal{A}(M_0,M_1,W)=b)-1\rightarrow 0
-\end{align*}
+\end{align*}$$
 
   Но это distinguish security!
 
