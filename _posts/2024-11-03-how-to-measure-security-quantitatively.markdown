@@ -191,37 +191,34 @@ $$\forall \epsilon >0\;\;\;\; \lim\limits_{n\rightarrow \infty}\frac{I(W_n;M_n)}
 - $$\lim_{n\rightarrow \infty}I(W;M)=0\;\;\;\Rightarrow \;p_{err}=1-2^{-n}$$
 - $$\lim_{n\rightarrow \infty}\frac{I(W;M)}{n}=0\;\;\;\Rightarrow \; p_{err}=1-o(1)$$
 
-#  \begin{lem}
-#    $p_{err}=p(\hat{M}\neq M),\;\;h(p_{err})=-p_{err}\log_2p_{err}-(1-p_{err})\log_2(1-p_{err})$\\
-#    \vspace*{0.3cm}
-#    $H(M|\hat{M})\leq h(p_{err})+p_{err}\log_2(|M|-1)$
-#  \end{lem}
-#  \vspace{0.5cm}
-#  $\frac{I(M;W)}{n}\leq \tau_n\;\;\lim_{n\rightarrow \infty}\tau_n=0$\\
-#  $H(M|\hat{M})\geq H(M|W),\;\; max_{p_{err}}h(p_{err})=1\;\Rightarrow\;1+p_{err}\log_2(|M|-1)\geq H(M|W)$\\
-#  $p_{err}\geq \frac{H(M|W)-1}{\log_2(|M|-1)}\geq\frac{H(M|W)-1}{\log_2|M|}\geq\frac{H(M)-n\tau_n}{\log_2|M|}=\frac{H(M)}{\log_2|M|}-\frac{n\tau_n}{\log_22^{nR}}=\frac{H(M)}{\log_2|M|}-\frac{\tau_n}{R}$
-#
-#
-#Совершенная секретность: $P(WM)\approx P(W)P(M)$\\
-#  Семантическая секретность: $P(WM)\approx_{p} P(W)P(M)$\\
-#
-#\begin{equation*}\text{Adv}(W)=\max_{f,M}\left(\max_{\mathcal{A}}P(\mathcal{A}(W)=f(M))-\max_{\text{Gen}}P(\text{Gen}(n)=f(M))\right)
-#      %=&\sup_{f,M}\left(2^{-H_{\infty}(f(M)|W)}-2^{-H_{\infty}(f(M))}\right)
-#    \xrightarrow[n\rightarrow \infty]{} 0\end{equation*}
-#
-#
-#\framesubtitle{Семантическая секретность}
-#       \begin{figure}
-#  \begin{tikzpicture}[scale=0.7]
-#    \node{};
-#    \node(2) at (2.5,0)[draw, rectangle]{\scriptsize{Шифратор}};
-#    \node(3) at (10,0.3){};
-#    \node(4) at (10,-0.3){};
-#    \node(5) at (11,0){\scriptsize{Злоумышленник, $\mathcal{A}$}};
-#%    \draw[-](2.east)--(6);
-#    \draw[->](3)--(4,0.3)node[above,midway]{\scriptsize{$m_0,\;m_1\;\;\;|m_0|=|m_1|$}};
-#    \draw[->](4,-0.3)--(4)node[below,midway]{\scriptsize{$c=F(m_b)=W$}};
-#  \end{tikzpicture}
+ $$\begin{align*}
+    &p_{err}=p(\hat{M}\neq M),\;\;h(p_{err})=-p_{err}\log_2p_{err}-(1-p_{err})\log_2(1-p_{err})\\
+    &H(M|\hat{M})\leq h(p_{err})+p_{err}\log_2(|M|-1)
+
+&  \frac{I(M;W)}{n}\leq \tau_n\;\;\lim_{n\rightarrow \infty}\tau_n=0\\
+&  H(M|\hat{M})\geq H(M|W),\;\; max_{p_{err}}h(p_{err})=1\;\Rightarrow\;1+p_{err}\log_2(|M|-1)\geq H(M|W)\\
+&  p_{err}\geq \frac{H(M|W)-1}{\log_2(|M|-1)}\geq\frac{H(M|W)-1}{\log_2|M|}\geq\frac{H(M)-n\tau_n}{\log_2|M|}=\frac{H(M)}{\log_2|M|}-\frac{n\tau_n}{\log_22^{nR}}=\frac{H(M)}{\log_2|M|}-\frac{\tau_n}{R}
+\end{align*}$$
+
+
+Совершенная секретность: $$P(WM)\approx P(W)P(M)$$
+Семантическая секретность: $$P(WM)\approx_{p} P(W)P(M)$$
+
+$$\begin{align*}\text{Adv}(W)=\max_{f,M}\left(\max_{\mathcal{A}}P(\mathcal{A}(W)=f(M))-\max_{\text{Gen}}P(\text{Gen}(n)=f(M))\right)
+     =&\sup_{f,M}\left(2^{-H_{\infty}(f(M)|W)}-2^{-H_{\infty}(f(M))}\right)
+    \xrightarrow[n\rightarrow \infty]{} 0\end{align*}$$
+
+
+Семантическая секретность
+  \begin{tikzpicture}[scale=0.7]
+    \node{};
+    \node(2) at (2.5,0)[draw, rectangle]{\scriptsize{Шифратор}};
+    \node(3) at (10,0.3){};
+    \node(4) at (10,-0.3){};
+    \node(5) at (11,0){\scriptsize{Злоумышленник, $\mathcal{A}$}};
+    \draw[->](3)--(4,0.3)node[above,midway]{\scriptsize{$m_0,\;m_1\;\;\;|m_0|=|m_1|$}};
+    \draw[->](4,-0.3)--(4)node[below,midway]{\scriptsize{$c=F(m_b)=W$}};
+  \end{tikzpicture}
 #       \end{figure}
 #       \begingroup
 #       \footnotesize
