@@ -13,7 +13,7 @@ We use a lot of cryptographic tools not even noticing it. Almost every website e
 
 For most of its history ctyptography was like a game where each side trying to outwit the other one. An encryption scheme or cipher was considered to be secure unless someone can successfully attack it. Then cryptographers developed some ad hoc defence and waited for a next attakers' move. Nowdays cryptography still doesn't look like the true science with clear and precise system of concepts, proofs and so on. Thanks to Claude Shannon there is a benchmark of a security. 
 
-Let's consider every message $$m$$ to be sent securelly as a sample of some distribution $$P(M)$$. By intercepting a message $$m$$ an attaker got some message $$w$$, which in turn is a sample of some distribution $$P(W)$$. According to Shannon a link between $$P(MW)$$ and $$P(M)P(W)$$ is the point.
+Let's consider every message $$m$$ to be sent securelly as a sample of some distribution $$P(M)$$. By intercepting a message $$m$$ an attacker got some message $$w$$, which in turn is a sample of some distribution $$P(W)$$. According to Shannon a link between $$P(MW)$$ and $$P(M)P(W)$$ is the point.
 
 ### How to measure
 
@@ -23,7 +23,7 @@ So we can consider all possible distances between distributions. Namely,
 - variation distance $$\Delta(P(MW), P(M)P(W))$$, where $$\Delta(P(X),P(X')) = \sum_{x \in X} \vert P(X=x) - P(X'=x)\vert$$
 - information density $$i(M; W) = \ln\frac{P(WM)}{P(W)P(M)}$$
 - mutual information per symbol $$\frac{I(W; M)}{n}$$
-- variation density per symbol $$\frac{\Delta(P(WM),P(W)P(M))}{n}$$
+- variation distance per symbol $$\frac{\Delta(P(WM),P(W)P(M))}{n}$$
 - information density per symbol $$\frac{i(W; M)}{n}$$
 
 
@@ -33,7 +33,7 @@ where $$n$$ is a length of a message. Why is a length important? Imagine someone
 
 To choose the best distance or just order them we need to determine comparison operator.
 
-They say $$\delta_{n}^{(1)}$$ is stronger than $$\delta_{n}^{(2)}$$  ($$\delta_n^{(2)}\preceq \delta_b^{(1)}$$) if convergence in probability to zero of $$\delta_{n}^{(1)}$$ results in convergence in probability to zero of $$\delta_{n}^{(2)}$$, i.e.
+They say $$\delta_{n}^{(1)}$$ is stronger than $$\delta_{n}^{(2)}$$  ($$\delta_n^{(2)}\preceq \delta_n^{(1)}$$) if convergence in probability to zero of $$\delta_{n}^{(1)}$$ results in convergence in probability to zero of $$\delta_{n}^{(2)}$$, i.e.
 $$
 \forall \epsilon >0\; \lim\limits_{n\rightarrow \infty}P(|\delta_n^{(1)}|>\epsilon) \Rightarrow \lim\limits_{n\rightarrow \infty}P(|\delta_n^{(2)}|>\epsilon)=0.
 $$
@@ -180,17 +180,17 @@ $$\forall \epsilon >0\;\;\;\; \lim\limits_{n\rightarrow \infty}\frac{I(W_n;M_n)}
 \leq \lim\limits_{n\rightarrow \infty}(\frac{\epsilon}{n}+\frac{\ln \vert\mathcal{M}\vert}{n}P(i(W_n;M_n)>\epsilon)) \Rightarrow \frac{I(W;m)}{n} \preceq i(W;M)$$
 
 
-
 ### What does security mean eventually
 
-- Совершенная секретность $I(W;M)=0$
-- Сильная секретность $\lim_{n\rightarrow \infty} I(W;M)=0$
-- Слабая секретность $\lim_{n\rightarrow \infty} \frac{I(W;M)}{n}=0$
+As far as the development of cryptography there were a variety of types of security. The first one is perfect security stated by Shannon $$I(W;M)=0$$. It followed by strong security $$\lim_{n\rightarrow \infty} I(W;M)=0$$ and weak security $$\lim_{n\rightarrow \infty} \frac{I(W;M)}{n}=0$$.
 
-- $$I(W;M)=0 \;\;\;\Rightarrow \; |K|\geq |M|$$
-- $$\lim_{n\rightarrow \infty}I(W;M)=0\;\;\;\Rightarrow \;p_{err}=1-2^{-n}$$
-- $$\lim_{n\rightarrow \infty}\frac{I(W;M)}{n}=0\;\;\;\Rightarrow \; p_{err}=1-o(1)$$
+It is clear that $$\text{weak security} \preceq \text{strong security} \preceq \text{perfect security}$$.
 
+
+#- $$I(W;M)=0 \;\;\;\Rightarrow \; |K|\geq |M|$$
+#- $$\lim_{n\rightarrow \infty}I(W;M)=0\;\;\;\Rightarrow \;p_{err}=1-2^{-n}$$
+#- $$\lim_{n\rightarrow \infty}\frac{I(W;M)}{n}=0\;\;\;\Rightarrow \; p_{err}=1-o(1)$$
+#
  $$\begin{align*}
     &p_{err}=p(\hat{M}\neq M),\;\;h(p_{err})=-p_{err}\log_2p_{err}-(1-p_{err})\log_2(1-p_{err})\\
     &H(M|\hat{M})\leq h(p_{err})+p_{err}\log_2(|M|-1)
