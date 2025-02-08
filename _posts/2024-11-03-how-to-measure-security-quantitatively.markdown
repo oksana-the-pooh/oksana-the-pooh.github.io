@@ -243,7 +243,7 @@ $$\begin{align*}
       \text{Adv}(W)_{\text{Сильная}}\leq 2 \text{Adv}(W)_{\text{Distinguish}}\log_2\frac{2^n}{\text{Adv}(W)_{\text{Distinguish}}}
       \end{align*}$$
 
-$$f(x) = \min(2x\log\frac{2^n}{x},1)$$. $$I(M;W)=\sum_{m}P(M=m)(H(W)−H(W|M=m))$$. $$m=argmax(H(W)-H(W|M=m))$$. Пусть $$x=\Delta(P(W),P(W|M=m))$$.
+$$f(x) = \min(2x\log\frac{2^n}{x},1)$$. $$I(M;W)=\sum_{m}P(M=m)(H(W)−H(W \vert M=m))$$. $$m=argmax(H(W)-H(W \vert M=m))$$. Пусть $$x=\Delta(P(W),P(W \vert M=m))$$.
 
 $$\begin{align*}
 I(M;W)&\leq H(W)−H(W|M=m)\\ &\leq f(x),\text{ т.к. }H(X)-H(Y)\leq 2\Delta(P(X),P(Y))\log_2\frac{N}{\Delta(P(X),P(Y))},N=|\text{supp}(P(X))\cup \text{supp}(P(Y))|\\
