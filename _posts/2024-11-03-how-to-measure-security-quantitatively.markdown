@@ -187,21 +187,20 @@ As far as the development of cryptography there were a variety of types of secur
 It is clear that $$\text{weak security} \preceq \text{strong security} \preceq \text{perfect security}$$.
 
 
-#- $$I(W;M)=0 \;\;\;\Rightarrow \; |K|\geq |M|$$
-#- $$\lim_{n\rightarrow \infty}I(W;M)=0\;\;\;\Rightarrow \;p_{err}=1-2^{-n}$$
-#- $$\lim_{n\rightarrow \infty}\frac{I(W;M)}{n}=0\;\;\;\Rightarrow \; p_{err}=1-o(1)$$
-#
+- $$I(W;M)=0 \;\;\;\Rightarrow \; |K|\geq |M|$$
+- $$\lim_{n\rightarrow \infty}I(W;M)=0\;\;\;\Rightarrow \;p_{err}=1-2^{-n}$$
+- $$\lim_{n\rightarrow \infty}\frac{I(W;M)}{n}=0\;\;\;\Rightarrow \; p_{err}=1-o(1)$$
+
  $$\begin{align*}
     &p_{err}=p(\hat{M}\neq M),\;\;h(p_{err})=-p_{err}\log_2p_{err}-(1-p_{err})\log_2(1-p_{err})\\
     &H(M|\hat{M})\leq h(p_{err})+p_{err}\log_2(|M|-1)
-
 &  \frac{I(M;W)}{n}\leq \tau_n\;\;\lim_{n\rightarrow \infty}\tau_n=0\\
 &  H(M|\hat{M})\geq H(M|W),\;\; max_{p_{err}}h(p_{err})=1\;\Rightarrow\;1+p_{err}\log_2(|M|-1)\geq H(M|W)\\
 &  p_{err}\geq \frac{H(M|W)-1}{\log_2(|M|-1)}\geq\frac{H(M|W)-1}{\log_2|M|}\geq\frac{H(M)-n\tau_n}{\log_2|M|}=\frac{H(M)}{\log_2|M|}-\frac{n\tau_n}{\log_22^{nR}}=\frac{H(M)}{\log_2|M|}-\frac{\tau_n}{R}
 \end{align*}$$
 
 
-Совершенная секретность: $$P(WM)\approx P(W)P(M)$$
+Совершенная секретность: $$P(WM)\approx P(W)P(M)$$ \\
 Семантическая секретность: $$P(WM)\approx_{p} P(W)P(M)$$
 
 $$\begin{align*}\text{Adv}(W)=\max_{f,M}\left(\max_{\mathcal{A}}P(\mathcal{A}(W)=f(M))-\max_{\text{Gen}}P(\text{Gen}(n)=f(M))\right)
