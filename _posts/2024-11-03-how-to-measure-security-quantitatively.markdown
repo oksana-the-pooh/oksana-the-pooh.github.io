@@ -246,9 +246,9 @@ So this formulation is close to $$P(M\vert W)\approx P(M)$$. They both mean that
 
 So the attack game for semantic security is as follows. An adversary sends to a challenger two messages $$M_0$$ and $$M_1$$. A challenger chooses one on them and sends back $$W=M_b$$, where $$b\sim\text{Uniform}({0,1})$$. An adversary should guess whether $$M_b=M_0$$ or $$M_b=M_1$$. So the advantage is
 
-$$\begin{align*}\forall \mathcal{A} \in \text{Poly  } \text{Adv}(W)&=\max_{M_1,M_0}|P(W=M_1)-P(W=M_0)|\rightarrow 0 \\ &\sim &\max_{\mathcal{A}\in 
-\textbf{Poly},M_1,M_0}|P(W=M_1)-P(W=M_0)|\\
-           =&\max_{\mathcal{A}\in \textbf{Poly}, M_0,M_1}2P(\mathcal{A}(W)=b)-1\rightarrow 0
+$$\begin{align*}\forall \mathcal{A} \in \text{Poly  } \text{Adv}(W)&=\max_{M_1,M_0}|P(W=M_1)-P(W=M_0)|\rightarrow 0 \\ 
+& \sim &\max_{\mathcal{A}\in \text{Poly},M_1,M_0}|P(W=M_1)-P(W=M_0)|\\
+           =&\max_{\mathcal{A}\in \text{Poly}, M_0,M_1}2P(\mathcal{A}(W)=b)-1\rightarrow 0
 \end{align*}$$
 
   Но это distinguish security!
