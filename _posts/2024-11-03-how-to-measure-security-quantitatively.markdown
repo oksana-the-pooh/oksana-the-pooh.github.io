@@ -234,7 +234,9 @@ The condition $$P(M\vert W) = P(M)$$ is difficult to guarantee. In practice the 
 
 $$P(M|W) \approx_{p} P(M).$$
 
-The $$\approx_{p}$$ means that two distributions can not be computationally distinguished. "Computationally" means the process should end before the heat death of the universe. simply saying it should be polinomial in time.
+The $$\approx_{p}$$ means that two distributions can not be computationally distinguished. "Computationally" in turn means the process should end before the heat death of the universe. Simply saying it should be polinomial in time. 
+
+In computational security world an _attack game_ is used to state the security definition. Attack game is played between a challenger and an adversary. A challenger follows fixed protocol, while an adversary may follow arbitrary one. They send messages to each other according to their protocols. An adversary behaviour is described by _advantage_. Adversary's advantage is essentially a probability of an adversary to win the game. The particually meaning of "win the game" depends on a security definition which we are trying to challenge.
 
 $$\begin{align*}\text{Adv}(W)=\max_{f,M}\left(\max_{\mathcal{A}}P(\mathcal{A}(W)=f(M))-\max_{\text{Gen}}P(\text{Gen}(n)=f(M))\right)
      =&\sup_{f,M}\left(2^{-H_{\infty}(f(M)|W)}-2^{-H_{\infty}(f(M))}\right)
