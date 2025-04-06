@@ -218,7 +218,7 @@ is clear.
 
 What does the weak security mean from information theory point of view? Let's reformulate $$\lim_{n\rightarrow \infty} \frac{I(W;M)}{n}=0$$ as $$\frac{I(M;W)}{n}\leq, \tau_n\;\;\lim_{n\rightarrow \infty}\tau_n=0$$ and recall Fano's lemma. If $$\hat{M}$$ is estimation of $$M$$, then $$H(M|\hat{M})\leq h(p_{err})+p_{err}\log_2(|M|-1)$$, whare $$p_{err}=p(\hat{M}\neq M),\;\;h(p_{err})=-p_{err}\log_2p_{err}-(1-p_{err})\log_2(1-p_{err})$$. Then under condition that $$M$$ is uniformly distributed
 $$\begin{align*}
-&  H(M|\hat{M})\geq H(M|W),\;\; max_{p_{err}}h(p_{err})=1\;\Rightarrow\;1+p_{err}\log_2(|M|-1)\geq H(M|W)\\
+&  H(M|\hat{M})\geq H(M|W),\;\; \max_{p_{err}}h(p_{err})=1\;\Rightarrow\;1+p_{err}\log_2(|M|-1)\geq H(M|W)\\
 &  p_{err}\geq \frac{H(M|W)-1}{\log_2(|M|-1)}\geq\frac{H(M|W)-1}{\log_2|M|}\geq\frac{H(M)-n\tau_n}{\log_2|M|}=\frac{H(M)}{\log_2|M|}-\frac{n\tau_n}{\log_22^{nR}}=\frac{H(M)}{\log_2|M|}-\frac{\tau_n}{R}=1-\frac{\tau_n}{R}.
 \end{align*}$$
 So the probability of an adversary being wrong converges to 1 with speed $$o(1)$$ as length $$n$$ of initial message $$M$$ increases. (Link) proved that for strong security the speed of convergence is exponential, so $$\lim_{n\rightarrow \infty}I(W;M)=0\;\;\;\Rightarrow \;p_{err}=1-2^{-n}$$.
@@ -244,10 +244,10 @@ $$\begin{align*}\text{Adv}(W)=\max_{f,M}\left(\max_{\mathcal{A}}P(\mathcal{A}(W)
 where $$\mathcal{A}$$ is some polynomial adversary algorithm, $$f$$ -- some deterministic function, $$\text{Gen}$$ -- random generator with output message of length $$n$$.
 So this formulation is close to $$P(M\vert W)\approx P(M)$$. They both mean that even having got a message $$W$$ an adversary can not estimate an initial message $$M$$ better than to guess it randomly without any $$W$$.
 
-So the attack game for semantic security is as follows. An adversary sends to a challenger two messages $$M_0$$ and $$M_1$$. A challenger chooses one on them and sends back $$W=M_b$$, where $$b\sim\text{Uniform}({0,1})$$. An adversary should guess whether $$M_b=M_0$$ or $$M_b=M_1$$. So the advantage is
+So the attack game for semantic security is as follows. An adversary sends to a challenger two messages $$M_0$$ and $$M_1$$. A challenger chooses one on them and sends back $$W=M_b$$, where $$b\sim\text{Uniform}({0,1})$$. An adversary should guess whether $$b=0$$ ($$M_b=M_0$$) or $$b=1$$ ($$M_b=M_1$$). So the advantage is
 
-$$\begin{align*}\forall \mathcal{A} \in \text{Poly  } \text{Adv}(W)&=\max_{M_1,M_0}|P(W=M_1)-P(W=M_0)|\rightarrow 0 \\ 
-& \sim &\max_{\mathcal{A}\in \text{Poly},M_1,M_0}|P(W=M_1)-P(W=M_0)|\\
+$$\begin{align*}\forall \mathcal{A} \in \text{Poly}\;\; \text{Adv}(W)&=\max_{M_1,M_0}|P(\mathcal{A}(W)=1)-P(\mathcal{A}(W)=0)|\rightarrow 0 \\ 
+& \sim \max_{\mathcal{A}\in \text{Poly},M_1,M_0}|P(\mathcal{A}(W)=1)-P(\mathcal{A}(W)=0)|\\
            =&\max_{\mathcal{A}\in \text{Poly}, M_0,M_1}2P(\mathcal{A}(W)=b)-1\rightarrow 0
 \end{align*}$$
 
