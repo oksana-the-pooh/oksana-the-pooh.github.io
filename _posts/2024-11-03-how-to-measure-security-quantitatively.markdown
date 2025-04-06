@@ -238,9 +238,11 @@ The $$\approx_{p}$$ means that two distributions can not be computationally dist
 
 In computational security world an _attack game_ is used to state the security definition. Attack game is played between a challenger and an adversary. A challenger follows fixed protocol, while an adversary may follow arbitrary one. They send messages to each other according to their protocols. An adversary behaviour is described by _advantage_. Adversary's advantage is essentially a probability of an adversary to win the game. The particually meaning of "win the game" depends on a security definition which we are trying to challenge.
 
+For semantic security an advantage is
 $$\begin{align*}\text{Adv}(W)=\max_{f,M}\left(\max_{\mathcal{A}}P(\mathcal{A}(W)=f(M))-\max_{\text{Gen}}P(\text{Gen}(n)=f(M))\right)
      =&\sup_{f,M}\left(2^{-H_{\infty}(f(M)|W)}-2^{-H_{\infty}(f(M))}\right)
-    \xrightarrow[n\rightarrow \infty]{} 0\end{align*}$$
+    \xrightarrow[n\rightarrow \infty]{} 0\end{align*},$$
+where $$\mathcal{A}(\cdot)$$ is some polynomial adversary algorithm, $$f$$ - some deterministic function, $$\text{Gen}$$ -- random generator with output message of lenth $$n$$.
 
 
 Семантическая секретность
