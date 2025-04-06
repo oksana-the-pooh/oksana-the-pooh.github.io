@@ -251,7 +251,7 @@ $$\begin{align*}\forall \mathcal{A} \in \text{Poly}\;\; \text{Adv}(W)&=\max_{M_1
            =&\max_{\mathcal{A}\in \text{Poly}, M_0,M_1}2P(\mathcal{A}(W)=b)-1\rightarrow 0
 \end{align*}$$
 
-Wait, but the last one is exactly the advantage of distinguishing security! Yes, there is also distinguishing security notion. Imagine there are two messages $$M_0$$ and $$M_1$$ and two intercepted messages $$W'$$ and $$W''$$. distinguishing security means that an adversary can not relate the intercepted messages to initional ones. So intercepted message doesn't just reveal anything about plain message, but it is impossible to say which particular plain message it belongs to.
+Wait, but the last one is exactly the advantage of distinguishing security! Yes, there is also distinguishing security notion. Imagine there are two messages $$M_0$$ and $$M_1$$ and two intercepted messages $$W'$$ and $$W''$$. Distinguishing security means that an adversary can not relate the intercepted messages to initinal ones. So intercepted message doesn't just reveal anything about plain message, but it is impossible to say which particular plain message it belongs to.
 
 Let's show that 
 $$\text{Distinguish security }\leftrightarrow\text{ Semantic security: }\text{Adv}_{\text{Semantic}}\leq \text{Adv}_{\text{Distinguish}}\leq 2\text{Adv}_{\text{Semantic}}$$
