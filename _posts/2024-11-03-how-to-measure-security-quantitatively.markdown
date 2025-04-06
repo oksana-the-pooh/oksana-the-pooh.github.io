@@ -205,7 +205,7 @@ $$\Delta(P(WM),P(W)P(M)) < aI(W;M),$$
 
 where $$a$$ is some constant.
 
-### What does security eventually mean
+### What security eventually means
 
 As far as the development of cryptography there were a variety of types of security. The first one is perfect security stated by Shannon $$I(W;M)=0$$. It followed by strong security $$\lim_{n\rightarrow \infty} I(W;M)=0$$ and weak security $$\lim_{n\rightarrow \infty} \frac{I(W;M)}{n}=0$$.
 
@@ -236,15 +236,15 @@ $$P(M|W) \approx_{p} P(M).$$
 
 The $$\approx_{p}$$ means that two distributions can not be computationally distinguished. "Computationally" in turn means the process should end before the heat death of the universe. Simply saying it should be polinomial in time. 
 
-In computational security world an _attack game_ is used to state the security definition. Attack game is played between a challenger and an adversary. A challenger follows fixed protocol, while an adversary may follow arbitrary one. They send messages to each other according to their protocols. An adversary behaviour is described by _advantage_. Adversary's advantage is essentially a probability of an adversary to win the game. The particually meaning of "win the game" depends on a security definition which we are trying to challenge.
+In computational security world an _attack game_ is used to state the security definition. Attack game is played between a challenger and an adversary. A challenger follows fixed protocol, while an adversary may follow arbitrary one. They send messages to each other according to their protocols. An adversary behaviour is described by _advantage_. Adversary's advantage is essentially a number showing how an adversary close to win the game. The particually meaning of "win the game" depends on a security definition which we are trying to challenge.
 
 For semantic security an advantage is
 $$\begin{align*}\text{Adv}(W)=\max_{f,M}\left(\max_{\mathcal{A}}P(\mathcal{A}(W)=f(M))-\max_{\text{Gen}}P(\text{Gen}(n)=f(M))\right)
      & \xrightarrow[n\rightarrow \infty]{} 0\end{align*},$$
 where $$\mathcal{A}$$ is some polynomial adversary algorithm, $$f$$ -- some deterministic function, $$\text{Gen}$$ -- random generator with output message of length $$n$$.
+So this formulation is close to $$P(M\vert W)\approx P(M)$$. They both mean that even having got a message $$W$$ an adversary can not estimate an initial message $$M$$ better than to guess it randomly without any $$W$$.
 
-
-Семантическая секретность
+So the attack game for semantic security is as follows. An adversary sends to a challenger two messages $$M_0$$ and $$M_1$$. A challenger chooses one on them and sends back $$f(M_b)$$, where $$b\sim\text{Uniform}({0,1})$$.
 
 $$\begin{align*}\forall \mathcal{A} \in \textbf{P}\;\; \text{Adv}(\mathcal{A})=\max_{M_1,M_0}|P(B_1)-P(B_0)|\rightarrow 0 \sim &\max_{\mathcal{A}\in 
 \textbf{P},M_1,M_0}|P(B_1)-P(B_0)|\\
@@ -291,3 +291,8 @@ I(M;W)&\leq H(W)−H(W|M=m)\\ &\leq f(x),\text{ т.к. }H(X)-H(Y)\leq 2\Delta(P(
 
 $$\begin{align*}\text{Слабая} \preceq (\text{Сильная} \leftrightarrow \text{Distinguish} \leftrightarrow \text{Семантическая}) \preceq  \text{Совершенная}
 \end{align*}$$
+https://arxiv.org/pdf/1210.6673
+https://crypto.stanford.edu/~dabo/cryptobook/BonehShoup_0_6.pdf
+https://arxiv.org/pdf/1201.2205
+https://ita.ucsd.edu/workshop/14/files/paper/paper_374.pdf
+https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=506f94a7f34bc1909c76a40bd5528c5fa35007a1
