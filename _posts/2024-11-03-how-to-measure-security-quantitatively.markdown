@@ -256,7 +256,7 @@ $$\begin{align*}\forall \mathcal{A} \in \textbf{P}\;\; \text{Adv}(\mathcal{A})=\
 Let's show that 
 $$\text{Distinguish security }\leftrightarrow\text{ Semantic security: }\text{Adv}_{\text{Semantic}}\leq \text{Adv}_{\text{Distinguish}}\leq 2\text{Adv}_{\text{Semantic}}$$
 
-$$\square M_0,M_1$$ are independent and distributed as $$M$$
+Let $$M_0,M_1$$ be independent and distributed as $$M$$
 $$\begin{align*}
   &P\left(\mathcal{A}(M_0,M_1,W|b=1)=1\right)=P\left(\mathcal{A}(W)=f(M)\right),\\
       &P(\mathcal{A}(M_0,M_1,W|b=0)=1)\leq P(\text{Gen}(n)=f(M))
@@ -264,11 +264,11 @@ $$\begin{align*}
 $$\begin{align*}
       P(\mathcal{A}(W)=f(M))-P(\text{Gen}(n)=f(M))&\leq P(\mathcal{A}(M_0,M_1,W|b=1)=1)-P(\mathcal{A}(M_0,M_1,W|b=0)=1)\\ &\leq \max_{M_0,M_1} 2P(\mathcal{A}(M_0,M_1,W)=b)-1
   \end{align*}$$
-$$M_b\sim \text{Uniform}(\{M_0,M_1\})),\;\; b\sim \text{Uniform}(\{0,1\})\Rightarrow$$ to define $$b\;\sim\text{ to define }M_b$$
+$$M_b\sim \text{Uniform}(\{M_0,M_1\})),\;\; b\sim \text{Uniform}(\{0,1\})\Rightarrow\text{ to define }b\;\sim\text{ to define }M_b$$
 
 $$\begin{align*}
       \frac{1}{2}\text{Adv}_{\text{Distinguish}}&=\max_{\mathcal{A},M_0,M_1}\left(P(\mathcal{A}(M_0,M_1,W)=b)-\frac{1}{2}\right)\\
-      &=\max_{\mathcal{A},M_0,M_1}\left(P(\mathcal{A}(W)=M_b)-\max_{\text{Gen}}P(\text{Gen}(n)=M_b)\right)\leq \text{Adv}_{\text{Семантическая}}
+      &=\max_{\mathcal{A},M_0,M_1}\left(P(\mathcal{A}(W)=M_b)-\max_{\text{Gen}}P(\text{Gen}(n)=M_b)\right)\leq \text{Adv}_{\text{Semantic}}
 \end{align*}$$
 
 Distinguish security $$\leftrightarrow$$ Сильная секретность
