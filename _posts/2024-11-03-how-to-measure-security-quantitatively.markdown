@@ -240,9 +240,8 @@ In computational security world an _attack game_ is used to state the security d
 
 For semantic security an advantage is
 $$\begin{align*}\text{Adv}(W)=\max_{f,M}\left(\max_{\mathcal{A}}P(\mathcal{A}(W)=f(M))-\max_{\text{Gen}}P(\text{Gen}(n)=f(M))\right)
-     =&\sup_{f,M}\left(2^{-H_{\infty}(f(M)|W)}-2^{-H_{\infty}(f(M))}\right)
-    \xrightarrow[n\rightarrow \infty]{} 0\end{align*},$$
-where $$\mathcal{A}(\cdot)$$ is some polynomial adversary algorithm, $$f$$ - some deterministic function, $$\text{Gen}$$ -- random generator with output message of lenth $$n$$.
+     & \xrightarrow[n\rightarrow \infty]{} 0\end{align*},$$
+where $$\mathcal{A}$$ is some polynomial adversary algorithm, $$f$$ -- some deterministic function, $$\text{Gen}$$ -- random generator with output message of length $$n$$.
 
 
 Семантическая секретность
