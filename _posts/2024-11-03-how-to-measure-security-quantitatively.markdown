@@ -261,7 +261,7 @@ $$\begin{align*}
       &P(\mathcal{A}(M_0,M_1,W|b=0)=1)\leq P(\text{Gen}(n)=f(M))
 \end{align*}$$
 $$\begin{align*}
-      P(\mathcal{A}(W)=f(M))-P(\text{Gen}(n)=f(M))&\leq P(\mathcal{A}(M_0,M_1,W|b=1)=1)-P(\mathcal{A}(M_0,M_1,W|b=0)=1)\\ &\leq \max_{M_0,M_1} 2P(\mathcal{A}(M_0,M_1,W)=b)-1
+      P(\mathcal{A}(W)=f(M))-P(\text{Gen}(n)=f(M))\leq P(\mathcal{A}(M_0,M_1,W|b=1)=1)-P(\mathcal{A}(M_0,M_1,W|b=0)=1)\\ &\leq \max_{M_0,M_1} 2P(\mathcal{A}(M_0,M_1,W)=b)-1
   \end{align*}$$
 $$M_b\sim \text{Uniform}(\{M_0,M_1\})),\;\; b\sim \text{Uniform}(\{0,1\})\Rightarrow$$ to define $$b\;\sim\text{ to define }M_b$$
 $$begin{align*}
