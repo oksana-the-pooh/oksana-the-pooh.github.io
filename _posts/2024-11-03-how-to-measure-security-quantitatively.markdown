@@ -253,7 +253,7 @@ $$\begin{align*}\forall \mathcal{A} \in \textbf{P}\;\; \text{Adv}(\mathcal{A})=\
 
   Но это distinguish security!
 
-$$\text{Distinguish security }$$\leftrightarrow$$\text{ Semantic security}$$
+$$\text{Distinguish security }\leftrightarrow\text{ Semantic security}$$
 $$\text{Adv}_{\text{Semantic}}\leq \text{Adv}_{\text{Distinguish}}\leq 2\text{Adv}_{\text{Semantic}}$$
 
 $$\square M_0,M_1$$ are independent and distributed as $$M$$
