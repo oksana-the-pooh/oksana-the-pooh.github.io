@@ -274,14 +274,15 @@ $$\begin{align*}
 \end{align*}$$
 
 Advantage of strong security is straghtforward from definition: $$\text{Adv}(W)_{\text{Strong}}=\max_{M}I(W;M)$$.
-Let's show that Distinguish security $$\leftrightarrow$$ Strong Security
+Let's show that $$\text{Distinguish security }\leftrightarrow \text{ Strong security}$$
 
 According to Pinsker's inenquality 
-$$\text{Adv}(W)_{\text{Strong}}=\max_{M}I(W;M) \geq 2\Delta(P(WM),P(W)P(M))^2$$
+$$\text{Adv}(W)_{\text{Strong}}=\max_{M}I(W;M) \geq \max_M 2\Delta(P(WM),P(W)P(M))^2$$
 $$\begin{align*}\Delta(P(WM),P(W)P(M)) &= \sum_{m,w}|P(W=w,M=m) - P(W=w)P(M=m)| \\
 &=\sum_{w,m}|P(W=w|M=m)P(M=m) - P(W=w)P(M=m)| \\
 &=\sum_m P(M=m)\sum_w|P(W=w|M=m) -P(W=w)| \\
-&=\sum_m P(M=m)\sum_w|P(W=w|M=m) - \sum_{tilde{m}}P(W=w|M=\tilde{m})P(M=tilde{m})|
+&=\sum_m P(M=m)\sum_w|P(W=w|M=m) - \sum_{\tilde{m}}P(W=w|M=\tilde{m})P(M=\tilde{m})|\\
+&=\sum_{m}P(M=m)\sum_w |\sum_{\tilde{m}}\left (P(W=w|M=m) -P(W=w|M=\tilde{m})\right)P(M=\tilde{m})|
 \end{align*}$$
 
 
