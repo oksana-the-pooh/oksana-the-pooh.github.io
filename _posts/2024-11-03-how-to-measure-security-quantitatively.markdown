@@ -203,7 +203,7 @@ Since $$\Delta(P(WM),P(W)P(M)) < 2$$, then
 
 $$\Delta(P(WM),P(W)P(M))^2 < aI(W;M),$$ 
 
-where $$a$$ is some constant.
+where $$a$$ is some constant. The lowest $$a$$ holdig the inequality true is equal 2.
 
 ### What security eventually means
 
@@ -306,7 +306,10 @@ I(M;W)&\leq H(W)−H(W|M=m)\\ &\leq f(x),\text{ т.к. }H(X)-H(Y)\leq 2\Delta(P(
 
 $$\begin{align*}\text{Слабая} \preceq (\text{Сильная} \leftrightarrow \text{Distinguish} \leftrightarrow \text{Семантическая}) \preceq  \text{Совершенная}
 \end{align*}$$
-https://arxiv.org/pdf/1210.6673
+
+References
+M. S. Pinsker Information and Information Stability of Random Variables and Processes. 
+M. Bellare, S. Tessaro, A. Vardy A Cryptographic Treatment of the Wiretap Channel <a href="https://arxiv.org/pdf/1210.6673">link</a>
 https://crypto.stanford.edu/~dabo/cryptobook/BonehShoup_0_6.pdf
 https://arxiv.org/pdf/1201.2205
 https://ita.ucsd.edu/workshop/14/files/paper/paper_374.pdf
