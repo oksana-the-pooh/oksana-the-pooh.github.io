@@ -308,10 +308,12 @@ $$\begin{align*}\text{Слабая} \preceq (\text{Сильная} \leftrightarr
 \end{align*}$$
 
 References
-M. S. Pinsker "Information and Information Stability of Random Variables and Processes" 
+M. S. Pinsker "Information and Information Stability of Random Variables and Processes"
+
 Mihir Bellare, Stefano Tessaro, Alexander Vardy "A Cryptographic Treatment of the Wiretap Channel" (<a href="https://arxiv.org/pdf/1201.2205">link</a>)
+
 Dan Boneh and Victor Shoup "A Graduate Course in Applied Cryptography" (<a href="https://crypto.stanford.edu/~dabo/cryptobook/BonehShoup_0_6.pdf">link</a>)
-Cong Ling, Laura Luzzi, "Jean-Claude Belfiore, Damien $$\text{Stehl\'e}$$ Semantically Secure Lattice Codes for the Gaussian Wiretap Channel" (<a href="https://arxiv.org/pdf/1210.6673">link</a>)
-Sergio $$\text{Verd\'u}$$ "Total Variation Distance and the Distribution of Relative Information" (<a href="https://ita.ucsd.edu/workshop/14/files/paper/paper_374.pdf">link</a>)
+Cong Ling, Laura Luzzi, "Jean-Claude Belfiore, Damien Stehle Semantically Secure Lattice Codes for the Gaussian Wiretap Channel" (<a href="https://arxiv.org/pdf/1210.6673">link</a>)
+Sergio Verdu "Total Variation Distance and the Distribution of Relative Information" (<a href="https://ita.ucsd.edu/workshop/14/files/paper/paper_374.pdf">link</a>)
 https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=506f94a7f34bc1909c76a40bd5528c5fa35007a1
 https://homes.cs.washington.edu/~tessaro/papers/wiretap-proc.pdf
