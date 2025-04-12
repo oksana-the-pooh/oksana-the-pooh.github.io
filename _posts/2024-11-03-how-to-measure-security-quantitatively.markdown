@@ -278,10 +278,10 @@ Let's show that Distinguish security $$\leftrightarrow$$ Strong Security
 
 According to Pinsker's inenquality 
 $$\text{Adv}(W)_{\text{Strong}}=\max_{M}I(W;M) \geq 2\Delta(P(WM),P(W)P(M))^2$$
-$$begin{align*}\Delta(P(WM),P(W)P(M)) &= \sum_{m,w}|P(W=w,M=m) - P(W=w)P(M=m)| \\
-&=\sum_{w,m}|P(W=w|M=m)P(M=m) - P(W=w)P(M=m)|\\
-&=\sum_mP(M=m)\sum_w|P(W=w|M=m) -P(W=w)|\\
-&=\sum_mP(M=m)\sum_w|P(W=w|M=m) - \sum_{tilde{m}}P(W=w|M=\tilde{m})P(M=tilde{m})|
+$$begin{align*}\Delta(P(WM),P(W)P(M)) = \sum_{m,w}|P(W=w,M=m) - P(W=w)P(M=m)| 
+=\sum_{w,m}|P(W=w|M=m)P(M=m) - P(W=w)P(M=m)|
+=\sum_mP(M=m)\sum_w|P(W=w|M=m) -P(W=w)|
+=\sum_mP(M=m)\sum_w|P(W=w|M=m) - \sum_{tilde{m}}P(W=w|M=\tilde{m})P(M=tilde{m})|
 \end{align*}$$
 
 
