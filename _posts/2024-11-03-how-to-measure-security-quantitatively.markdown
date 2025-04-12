@@ -302,10 +302,8 @@ I(M;W)&\leq H(W)−H(W|M=m)\\ &\leq f(x),\text{ т.к. }H(X)-H(Y)\leq 2\Delta(P(
       & \leq f(\max_{m_0,m_1}\Delta(P(W|M=m_0),P(W|M=m_1)) \text{ т.к. }x\leq \max_{m_0,m_1}\Delta(P(W|M=m_0),P(W|M=m_1))\;\;\forall M 
 \end{align*}$$
 
-Что такое 'секретно' и что все это значит?
-
-$$\begin{align*}\text{Слабая} \preceq (\text{Сильная} \leftrightarrow \text{Distinguish} \leftrightarrow \text{Семантическая}) \preceq  \text{Совершенная}
-\end{align*}$$
+So finally
+$$\text{Weak security} \preceq (\text{Strong security} \leftrightarrow \text{Distinguishing security} \leftrightarrow \text{Semantic security}) \preceq  \text{Perfect security}$$
 
 References  
 M. S. Pinsker "Information and Information Stability of Random Variables and Processes"  
