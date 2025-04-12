@@ -282,7 +282,7 @@ $$\begin{align*}\Delta(P(WM),P(W)P(M)) &= \sum_{m,w}|P(W=w,M=m) - P(W=w)P(M=m)| 
 &=\sum_{w,m}|P(W=w|M=m)P(M=m) - P(W=w)P(M=m)| \\
 &=\sum_m P(M=m)\sum_w|P(W=w|M=m) -P(W=w)| \\
 &=\sum_m P(M=m)\sum_w|P(W=w|M=m) - \sum_{\tilde{m}}P(W=w|M=\tilde{m})P(M=\tilde{m})|\\
-&=\sum_{m}P(M=m)\sum_w |\sum_{\tilde{m}}\left (P(W=w|M=m) -P(W=w|M=\tilde{m})\right)P(M=\tilde{m})|
+&=\sum_{m}P(M=m)\sum_w |\sum_{\tilde{m}}\left(P(W=w|M=m) -P(W=w|M=\tilde{m})\right)P(M=\tilde{m})|
 \end{align*}$$
 
 
