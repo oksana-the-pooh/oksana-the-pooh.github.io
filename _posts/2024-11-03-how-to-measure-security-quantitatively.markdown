@@ -305,6 +305,9 @@ I(M;W)&\leq H(W)−H(W|M=m)\\ &\leq f(x),\text{ т.к. }H(X)-H(Y)\leq 2\Delta(P(
 So finally
 $$\text{Weak security} \preceq (\text{Strong security} \leftrightarrow \text{Distinguishing security} \leftrightarrow \text{Semantic security}) \preceq  \text{Perfect security}$$
 
+<br />
+<br />
+<br />
 References  
 M. S. Pinsker "Information and Information Stability of Random Variables and Processes"  
 Mihir Bellare, Stefano Tessaro, Alexander Vardy [A Cryptographic Treatment of the Wiretap Channel](https://arxiv.org/pdf/1201.2205)  
