@@ -289,7 +289,7 @@ $$\begin{align*}\Delta(P(WM),P(W)P(M)) &= \sum_m\frac{1}{2}\sum_w\frac{1}{2}|P(W
 &=\frac{1}{2}\sum_w|P(W=w|M=M_0)-P(W=m|M=m_1)|\\
 &=\frac{1}{2}\Delta(P(W|M_0),P(W|M_1))\end{align*}.$$
 
-$$\text{Adv}(W)_{\text{Strong}} \geq 2\max_M \Delta(P(WM),P(W)P(M))^2 = \frac{1}{2}\max_{M_0,M_1}\Delta(P(W\vert M_0),P(W\vert M_1))^2=\frac{1}{2}\text{Adv}_{\text{Distinguish}}$$
+$$\text{Adv}(W)_{\text{Strong}}=\max_M I(W;M) \geq 2\max_M \Delta(P(WM),P(W)P(M))^2 = \frac{1}{2}\max_{M_0,M_1}\Delta(P(W\vert M_0),P(W\vert M_1))^2=\frac{1}{2}\text{Adv}_{\text{Distinguish}}^2$$
 
 $$\begin{align*}
       \text{Adv}(W)_{\text{Сильная}}\leq 2 \text{Adv}(W)_{\text{Distinguish}}\log_2\frac{2^n}{\text{Adv}(W)_{\text{Distinguish}}}
