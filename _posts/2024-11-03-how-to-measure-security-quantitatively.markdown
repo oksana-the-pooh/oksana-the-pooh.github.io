@@ -307,7 +307,7 @@ I(M;W)&\leq H(W)−H(W|M=m)\\ &\leq f(x),\text{ т.к. }H(X)-H(Y)\leq 2\Delta(P(
 $$\begin{align*}\text{Слабая} \preceq (\text{Сильная} \leftrightarrow \text{Distinguish} \leftrightarrow \text{Семантическая}) \preceq  \text{Совершенная}
 \end{align*}$$
 
-References
+References  
 M. S. Pinsker "Information and Information Stability of Random Variables and Processes"  
 Mihir Bellare, Stefano Tessaro, Alexander Vardy [A Cryptographic Treatment of the Wiretap Channel](https://arxiv.org/pdf/1201.2205)  
 Dan Boneh and Victor Shoup [A Graduate Course in Applied Cryptography](https://crypto.stanford.edu/~dabo/cryptobook/BonehShoup_0_6.pdf)  
