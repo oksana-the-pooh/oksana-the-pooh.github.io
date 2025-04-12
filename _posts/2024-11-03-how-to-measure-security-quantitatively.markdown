@@ -285,7 +285,7 @@ $$\begin{align*}\Delta(P(WM),P(W)P(M)) &= \sum_{m,w}|P(W=w,M=m) - P(W=w)P(M=m)| 
 &=\sum_{m}P(M=m)\sum_w |\sum_{\tilde{m}}\left(P(W=w|M=m) -P(W=w|M=\tilde{m})\right)P(M=\tilde{m})|
 \end{align*}$$
 Seeing as $$M\sim \text{Uniform}(\{M_0,M_1\}))$$, the only one non-zero term of sum over $$\tilde{m}$$ is $$P(W=w|M=M_0) -P(W=w|M=M_1)$$ and $$P(M)=\frac{1}{2}$$.
-$$\begin{align*}\DIelta(P(WM),P(W)P(M)) = \sum_m\frac{1}{2}\sum_w\frac{1}{2}|P(W=w|M=M_0)-P(W=w|M=M_1)|\end{aling*}$$=\frac{1}{2}\sum_w|P(W=w|M=M_0)-P(W=m|M=m_1)|=\frac{1}{2}\Delta(P(W|M_0)-P(W|M_1))\end{align*}$$
+$$\begin{align*}\DIelta(P(WM),P(W)P(M)) = \sum_m\frac{1}{2}\sum_w\frac{1}{2}|P(W=w|M=M_0)-P(W=w|M=M_1)|=\frac{1}{2}\sum_w|P(W=w|M=M_0)-P(W=m|M=m_1)|=\frac{1}{2}\Delta(P(W|M_0)-P(W|M_1))\end{align*}$$
 
 
 
