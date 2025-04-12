@@ -201,7 +201,7 @@ $$\begin{align*}
 
 Since $$\Delta(P(WM),P(W)P(M)) < 2$$, then 
 
-$$\Delta(P(WM),P(W)P(M)) < aI(W;M),$$ 
+$$\Delta(P(WM),P(W)P(M))^2 < aI(W;M),$$ 
 
 where $$a$$ is some constant.
 
@@ -244,7 +244,7 @@ $$\begin{align*}\text{Adv}(W)=\max_{f,M}\left(\max_{\mathcal{A}}P(\mathcal{A}(W)
 where $$\mathcal{A}$$ is some polynomial adversary algorithm, $$f$$ -- some deterministic function, $$\text{Gen}$$ -- random generator with output message of length $$n$$.
 So this formulation is close to $$P(M\vert W)\approx P(M)$$. They both mean that even having got a message $$W$$ an adversary can not estimate an initial message $$M$$ better than to guess it randomly without any $$W$$.
 
-So the attack game for semantic security is as follows. An adversary sends to a challenger two messages $$M_0$$ and $$M_1$$. A challenger chooses one on them and sends back $$W=M_b$$, where $$b\sim\text{Uniform}({0,1})$$. An adversary should guess whether $$b=0$$ ($$M_b=M_0$$) or $$b=1$$ ($$M_b=M_1$$). So the advantage is
+So the attack game for semantic security is as follows. An adversary sends to a challenger two messages $$M_0$$ and $$M_1$$. A challenger chooses one on them and sends back $$W=M_b$$, where $$b\sim\text{Uniform}(\{0,1\})$$. An adversary should guess whether $$b=0$$ ($$M_b=M_0$$) or $$b=1$$ ($$M_b=M_1$$). So the advantage is
 
 $$\begin{align*}\forall \mathcal{A} \in \text{Poly}\;\; \text{Adv}(W)&=\max_{M_1,M_0}|P(\mathcal{A}(W)=1)-P(\mathcal{A}(W)=0)|\rightarrow 0 \\ 
 & \sim \max_{\mathcal{A}\in \text{Poly},M_1,M_0}|P(\mathcal{A}(W)=1)-P(\mathcal{A}(W)=0)|\\
@@ -264,6 +264,8 @@ $$\begin{align*}
 $$\begin{align*}
       P(\mathcal{A}(W)=f(M))-P(\text{Gen}(n)=f(M))&\leq P(\mathcal{A}(M_0,M_1,W|b=1)=1)-P(\mathcal{A}(M_0,M_1,W|b=0)=1)\\ &\leq \max_{M_0,M_1} 2P(\mathcal{A}(M_0,M_1,W)=b)-1
   \end{align*}$$
+So $$\text{Adv}_{\text{Semantic}}\leq \text{Adv}_{\text{Distinguish}}$$.
+
 $$M_b\sim \text{Uniform}(\{M_0,M_1\})),\;\; b\sim \text{Uniform}(\{0,1\})\Rightarrow\text{ to define }b\;\sim\text{ to define }M_b$$
 
 $$\begin{align*}
@@ -271,10 +273,17 @@ $$\begin{align*}
       &=\max_{\mathcal{A},M_0,M_1}\left(P(\mathcal{A}(W)=M_b)-\max_{\text{Gen}}P(\text{Gen}(n)=M_b)\right)\leq \text{Adv}_{\text{Semantic}}
 \end{align*}$$
 
-Distinguish security $$\leftrightarrow$$ Сильная секретность
-Сильная секретность: $$\text{Adv}(W)_{\text{Сильная}}=I(W;M)$$
+Advantage of strong security is straghtforward from definition: $$\text{Adv}(W)_{\text{Strong}}=\max_{M}I(W;M)$$.
+Let's show that Distinguish security $$\leftrightarrow$$ Strong Security
 
-$$\text{Adv}(W)_{\text{Distinguish}}\leq \sqrt{2\text{Adv}(W)_{\text{Сильная}}}$$ (нер-во Пинскера)
+According to Pinsker's inenquality 
+$$\text{Adv}(W)_{\text{Strong}}=\max_{M}I(W;M) \geq 2\Delta(P(WM),P(W)P(M))^2$$
+$$begin{align*}\Delta(P(WM),P(W)P(M)) &= \sum_{m,w}|P(W=w,M=m) - P(W=w)P(M=m)| \\
+&=\sum_{w,m}|P(W=w|M=m)P(M=m) - P(W=w)P(M=m)|\\
+&=\sum_mP(M=m)\sum_w|P(W=w|M=m) -P(W=w)|\\
+&=\sum_mP(M=m)\sum_w|P(W=w|M=m) - \sum_{tilde{m}}P(W=w|M=\tilde{m})P(M=tilde{m})|
+
+
 
 $$\begin{align*}
       \text{Adv}(W)_{\text{Сильная}}\leq 2 \text{Adv}(W)_{\text{Distinguish}}\log_2\frac{2^n}{\text{Adv}(W)_{\text{Distinguish}}}
