@@ -308,10 +308,10 @@ $$\begin{align*}\text{Слабая} \preceq (\text{Сильная} \leftrightarr
 \end{align*}$$
 
 References
-M. S. Pinsker "Information and Information Stability of Random Variables and Processes"
-Mihir Bellare, Stefano Tessaro, Alexander Vardy [A Cryptographic Treatment of the Wiretap Channel](https://arxiv.org/pdf/1201.2205)
-Dan Boneh and Victor Shoup [A Graduate Course in Applied Cryptography](https://crypto.stanford.edu/~dabo/cryptobook/BonehShoup_0_6.pdf)
-Cong Ling, Laura Luzzi, Jean-Claude Belfiore, Damien Stehle [Semantically Secure Lattice Codes for the Gaussian Wiretap Channel](https://arxiv.org/pdf/1210.6673)
-Sergio Verdu [Total Variation Distance and the Distribution of Relative Information]("https://ita.ucsd.edu/workshop/14/files/paper/paper_374.pdf)
-Matthieu Bloch and J. Nicholas Laneman [On the Secrecy Capacity of Arbitrary Wiretap Channels](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=506f94a7f34bc1909c76a40bd5528c5fa35007a1)
+M. S. Pinsker "Information and Information Stability of Random Variables and Processes"  
+Mihir Bellare, Stefano Tessaro, Alexander Vardy [A Cryptographic Treatment of the Wiretap Channel](https://arxiv.org/pdf/1201.2205)  
+Dan Boneh and Victor Shoup [A Graduate Course in Applied Cryptography](https://crypto.stanford.edu/~dabo/cryptobook/BonehShoup_0_6.pdf)  
+Cong Ling, Laura Luzzi, Jean-Claude Belfiore, Damien Stehle [Semantically Secure Lattice Codes for the Gaussian Wiretap Channel](https://arxiv.org/pdf/1210.6673)  
+Sergio Verdu [Total Variation Distance and the Distribution of Relative Information]("https://ita.ucsd.edu/workshop/14/files/paper/paper_374.pdf)  
+Matthieu Bloch and J. Nicholas Laneman [On the Secrecy Capacity of Arbitrary Wiretap Channels](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=506f94a7f34bc1909c76a40bd5528c5fa35007a1)  
 Mihir Bellare, Stefano Tessaro, Alexander Vardy [Semantic Security for the Wiretap Channel](https://homes.cs.washington.edu/~tessaro/papers/wiretap-proc.pdf)
