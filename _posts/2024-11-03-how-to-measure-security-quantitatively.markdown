@@ -274,10 +274,10 @@ $$\begin{align*}
 \end{align*}$$
 
 Advantage of strong security is straghtforward from definition: $$\text{Adv}(W)_{\text{Strong}}=\max_{M}I(W;M)$$.
-Let's show that $$\text{Distinguish security }\leftrightarrow \text{ Strong security}$$
+Let's show that $$\text{Distinguishing security }\leftrightarrow \text{ Strong security}$$
 
 According to Pinsker's inenquality 
-$$\text{Adv}(W)_{\text{Strong}}=\max_{M}I(W;M) \geq \max_M 2\Delta(P(WM),P(W)P(M))^2$$
+$$\text{Adv}(W)_{\text{Strong}}=\max_{M}I(W;M) \geq 2\max_M \Delta(P(WM),P(W)P(M))^2$$
 $$\begin{align*}\Delta(P(WM),P(W)P(M)) &= \sum_{m,w}|P(W=w,M=m) - P(W=w)P(M=m)| \\
 &=\sum_{w,m}|P(W=w|M=m)P(M=m) - P(W=w)P(M=m)| \\
 &=\sum_m P(M=m)\sum_w|P(W=w|M=m) -P(W=w)| \\
@@ -287,9 +287,9 @@ $$\begin{align*}\Delta(P(WM),P(W)P(M)) &= \sum_{m,w}|P(W=w,M=m) - P(W=w)P(M=m)| 
 Seeing as $$M\sim \text{Uniform}(\{M_0,M_1\}))$$, the only one non-zero term of sum over $$\tilde{m}$$ is $$P(W=w|M=M_0) -P(W=w|M=M_1)$$ and $$P(M)=\frac{1}{2}$$.
 $$\begin{align*}\Delta(P(WM),P(W)P(M)) &= \sum_m\frac{1}{2}\sum_w\frac{1}{2}|P(W=w|M=M_0)-P(W=w|M=M_1)| \\
 &=\frac{1}{2}\sum_w|P(W=w|M=M_0)-P(W=m|M=m_1)|\\
-&=\frac{1}{2}\Delta(P(W|M_0)-P(W|M_1))\end{align*}$$
+&=\frac{1}{2}\Delta(P(W|M_0),P(W|M_1))\end{align*}.$$
 
-
+$\text{Adv}(W)_{\text{Strong}} \geq 2\max_M \Delta(P(WM),P(W)P(M))^2 = \frac{1}{2}\max_{M_0,M_1}\Delta(P(W|M_0),P(W|M_1))^2=\frac{1}{2}\text{Adv}_{\txt{Distinguish}}$$
 
 $$\begin{align*}
       \text{Adv}(W)_{\text{Сильная}}\leq 2 \text{Adv}(W)_{\text{Distinguish}}\log_2\frac{2^n}{\text{Adv}(W)_{\text{Distinguish}}}
