@@ -8,7 +8,7 @@
     {% if page.use_math %}
     {% include mathjax_support.html %}
     {% endif %}
-
+    {% raw %}{% seo %}{% endraw %}
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
