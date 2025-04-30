@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "How to Measure Security"
-date:   2024-11-03 20:08:00 +0300
+date:   2025-04-30 12:47:00 +0300
 categories: cryptography information_theory probability_theory
 use_math: true
 ---
