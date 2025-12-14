@@ -2,8 +2,9 @@
 <html>
   <head>
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
-    {% seo %}
+    
     <meta name="robots" content="index, follow">
+    {% seo %}
     {% include meta.html %}
 
     {% if page.use_math %}
